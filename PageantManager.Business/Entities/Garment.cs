@@ -1,8 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace PageantManager.Business.Entities
 {
     public class Garment
     {
+        [Key]
         public int GarmentId { get; set; }
         public int GarmentTypeId { get; set; }
         public decimal? ChestMin { get; set; }

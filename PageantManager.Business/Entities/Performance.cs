@@ -1,8 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace PageantManager.Business.Entities
 {
     public class Performance
     {
+        [Key]
         public int PerformanceId { get; set; }
         public int PageantId { get; set; }
 
@@ -14,7 +17,10 @@ namespace PageantManager.Business.Entities
 
         public DateTime ApplicationEndDate { get; set; }
 
+        [StringLength(150)]
         public string Description { get; set; }
+
+        public Pageant Pageant { get; set; }
 
 	}
 }
