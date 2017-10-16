@@ -22,6 +22,17 @@ namespace PageantManager.Web.Controllers.Api
       var pageants = await _pageantsBusiness.GetPageants();
       return Ok(new ItemsModel<PageantModel>(pageants));
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody] PageantModel model)
+    {
+      if (ModelState.IsValid)
+      {
+        model = await _pageantsBusiness.UpdatePageant(model);
+        return Ok(model);
+      }
+      return BadRequest(ModelState.Values);
+    }
     // GET
 //    public IActionResult Index()
 //    {
