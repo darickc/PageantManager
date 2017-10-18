@@ -17,9 +17,9 @@ namespace PageantManager.Business.Business
 			_ctx = ctx;
 		}
 	    
-	    public async Task<CostumeModel> GetCostumes()
+	    public async Task<CostumeModel> GetCostumes(int pageantId)
 	    {
-		    var costumes = await _ctx.Costumes.OrderBy(g => g.Description).ToListAsync();
+		    var costumes = await _ctx.Costumes.Where(c=>c.PageantId == pageantId).OrderBy(g => g.Description).ToListAsync();
 		    return Mapper.Map<CostumeModel>(costumes);
 	    }
 	    

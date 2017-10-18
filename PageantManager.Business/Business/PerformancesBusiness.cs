@@ -17,9 +17,9 @@ namespace PageantManager.Business.Business
             _ctx = ctx;
         }
 
-		public async Task<List<PerformanceModel>> GetPerformances()
+		public async Task<List<PerformanceModel>> GetPerformances(int pageantId)
 		{
-			var performances = await _ctx.Performances.OrderBy(p => p.StartDate).ToListAsync();
+			var performances = await _ctx.Performances.Where(p=>p.PageantId == pageantId).OrderBy(p => p.StartDate).ToListAsync();
 			return Mapper.Map<List<PerformanceModel>>(performances);
 		}
 

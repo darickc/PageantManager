@@ -10,10 +10,13 @@ namespace PageantManager.Web.Controllers.Api
   public class PageantsController : Controller
   {
     private readonly PageantsBusiness _pageantsBusiness;
+    private readonly PerformancesBusiness _performancesBusiness;
+    private readonly CostumesBusiness _costumesBusiness;
 
-    public PageantsController(PageantsBusiness pageantsBusiness)
+    public PageantsController(PageantsBusiness pageantsBusiness, PerformancesBusiness performancesBusiness)
     {
       _pageantsBusiness = pageantsBusiness;
+      _performancesBusiness = performancesBusiness;
     }
 
     [HttpGet]
@@ -33,11 +36,19 @@ namespace PageantManager.Web.Controllers.Api
       }
       return BadRequest(ModelState.Values);
     }
-    // GET
-//    public IActionResult Index()
-//    {
-//      return
-//      View();
-//    }
+
+    [HttpGet("{id}/performances")]
+    public async Task<IActionResult> GetPerformances(int id)
+    {
+      var performances = await _performancesBusiness.GetPerformances(id);
+      return Ok(new ItemsModel<PerformanceModel>(performances));
+    }
+
+    [HttpGet("{id}/costumes")]
+    public async Task<IActionResult> GetCostumes(int id)
+    {
+      var costumes = await _costumesBusiness.GetCostumes(id);
+      return Ok(new ItemsModel<CostumeModel>(costumes));
+    }
   }
 }
