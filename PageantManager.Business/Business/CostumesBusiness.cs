@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -17,10 +18,10 @@ namespace PageantManager.Business.Business
 			_ctx = ctx;
 		}
 	    
-	    public async Task<CostumeModel> GetCostumes(int pageantId)
+	    public async Task<List<CostumeModel>> GetCostumes(int pageantId)
 	    {
 		    var costumes = await _ctx.Costumes.Where(c=>c.PageantId == pageantId).OrderBy(g => g.Description).ToListAsync();
-		    return Mapper.Map<CostumeModel>(costumes);
+		    return Mapper.Map<List<CostumeModel>>(costumes);
 	    }
 	    
 	    public async Task<CostumeModel> UpdateCostume(CostumeModel model)
