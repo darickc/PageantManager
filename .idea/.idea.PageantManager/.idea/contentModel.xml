@@ -100,6 +100,14 @@
             <e p="app.component.scss" t="Include" />
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
+            <e p="Shared" t="Include">
+              <e p="services" t="Include">
+                <e p="api.service.ts" t="Include" />
+                <e p="index.ts" t="Include" />
+                <e p="pageants.service.ts" t="Include" />
+              </e>
+              <e p="shared.module.ts" t="Include" />
+            </e>
           </e>
           <e p="assets" t="Include">
             <e p=".gitkeep" t="Include" />
