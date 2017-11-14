@@ -78,6 +78,11 @@
           <e p="tsconfig.e2e.json" t="Include" />
         </e>
         <e p="karma.conf.js" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20171114044550_initialCreate.cs" t="Include" />
+          <e p="20171114044550_initialCreate.Designer.cs" t="Include" />
+          <e p="PageantManagerContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
@@ -86,6 +91,7 @@
           </e>
         </e>
         <e p="package.json" t="Include" />
+        <e p="PageanManager.db" t="Include" />
         <e p="PageantManager.Web.csproj" t="IncludeRecursive" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -95,12 +101,39 @@
         <e p="README.md" t="Include" />
         <e p="src" t="Include">
           <e p="app" t="Include">
+            <e p="admin" t="Include">
+              <e p="admin.component.html" t="Include" />
+              <e p="admin.component.scss" t="Include" />
+              <e p="admin.component.spec.ts" t="Include" />
+              <e p="admin.component.ts" t="Include" />
+              <e p="admin.module.ts" t="Include" />
+              <e p="pageants" t="Include">
+                <e p="pageants.component.html" t="Include" />
+                <e p="pageants.component.scss" t="Include" />
+                <e p="pageants.component.spec.ts" t="Include" />
+                <e p="pageants.component.ts" t="Include" />
+              </e>
+            </e>
             <e p="app-routing.module.ts" t="Include" />
             <e p="app.component.html" t="Include" />
             <e p="app.component.scss" t="Include" />
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
+            <e p="Home" t="Include">
+              <e p="home.component.html" t="Include" />
+              <e p="home.component.scss" t="Include" />
+              <e p="home.component.ts" t="Include" />
+              <e p="home.module.ts" t="Include" />
+            </e>
             <e p="Shared" t="Include">
+              <e p="index.ts" t="Include" />
+              <e p="Models" t="Include">
+                <e p="costume.ts" t="Include" />
+                <e p="garment-type.ts" t="Include" />
+                <e p="index.ts" t="Include" />
+                <e p="pageant.ts" t="Include" />
+                <e p="performance.ts" t="Include" />
+              </e>
               <e p="services" t="Include">
                 <e p="api.service.ts" t="Include" />
                 <e p="index.ts" t="Include" />
@@ -140,6 +173,8 @@
           </e>
         </e>
         <e p="wwwroot" t="Include">
+          <e p="admin.module.chunk.js" t="Include" />
+          <e p="admin.module.chunk.js.map" t="Include" />
           <e p="favicon.ico" t="Include" />
           <e p="index.html" t="Include" />
           <e p="inline.bundle.js" t="Include" />

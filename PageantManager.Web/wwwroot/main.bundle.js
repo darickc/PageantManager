@@ -1,19 +1,27 @@
 webpackJsonp(["main"],{
 
 /***/ "../../../../../src/$$_gendir lazy recursive":
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
+var map = {
+	"app/admin/admin.module": [
+		"../../../../../src/app/admin/admin.module.ts",
+		"admin.module"
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
 	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
@@ -21,6 +29,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export routes */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
@@ -33,10 +42,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [
-    {
-        path: '',
-        children: []
-    }
+    { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule' }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -57,7 +63,7 @@ AppRoutingModule = __decorate([
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "pageants\n<router-outlet></router-outlet>\n"
+module.exports = "<h1>Pageant Manager</h1>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -134,7 +140,7 @@ AppComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["b" /* Title */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["b" /* Title */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* Title */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* Title */]) === "function" && _c || Object])
 ], AppComponent);
 
 var _a, _b, _c;
@@ -149,16 +155,18 @@ var _a, _b, _c;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__ = __webpack_require__("../../../../../src/app/shared/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home_module__ = __webpack_require__("../../../../../src/app/home/home.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_shared_module__ = __webpack_require__("../../../../../src/app/shared/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home_module__ = __webpack_require__("../../../../../src/app/home/home.module.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -173,16 +181,17 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_4__shared_shared_module__["a" /* SharedModule */],
-            __WEBPACK_IMPORTED_MODULE_5__home_home_module__["a" /* HomeModule */],
-            __WEBPACK_IMPORTED_MODULE_2__app_routing_module__["a" /* AppRoutingModule */]
+            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_5__shared_shared_module__["a" /* SharedModule */],
+            __WEBPACK_IMPORTED_MODULE_6__home_home_module__["a" /* HomeModule */],
+            __WEBPACK_IMPORTED_MODULE_3__app_routing_module__["a" /* AppRoutingModule */]
         ],
         providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -317,8 +326,91 @@ HomeModule = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services__ = __webpack_require__("../../../../../src/app/shared/services/index.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__services__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models__ = __webpack_require__("../../../../../src/app/shared/models/index.ts");
+/* unused harmony namespace reexport */
+
 
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/models/costume.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Costume */
+var Costume = (function () {
+    function Costume() {
+    }
+    return Costume;
+}());
+
+//# sourceMappingURL=costume.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/models/garment-type.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export GarmentType */
+var GarmentType = (function () {
+    function GarmentType() {
+    }
+    return GarmentType;
+}());
+
+//# sourceMappingURL=garment-type.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/models/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__costume__ = __webpack_require__("../../../../../src/app/shared/models/costume.ts");
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__garment_type__ = __webpack_require__("../../../../../src/app/shared/models/garment-type.ts");
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pageant__ = __webpack_require__("../../../../../src/app/shared/models/pageant.ts");
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__performance__ = __webpack_require__("../../../../../src/app/shared/models/performance.ts");
+/* unused harmony namespace reexport */
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/models/pageant.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Pageant */
+var Pageant = (function () {
+    function Pageant() {
+    }
+    return Pageant;
+}());
+
+//# sourceMappingURL=pageant.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/models/performance.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Performance */
+var Performance = (function () {
+    function Performance() {
+    }
+    return Performance;
+}());
+
+//# sourceMappingURL=performance.js.map
 
 /***/ }),
 
@@ -432,7 +524,22 @@ var PageantsService = (function () {
         this.url = 'pageants';
     }
     PageantsService.prototype.getPageants = function () {
-        return this.apiService.get(this.url);
+        return this.apiService.get(this.url)
+            .map(function (data) { return data.items; });
+    };
+    PageantsService.prototype.addPagenat = function (pageant) {
+        return this.apiService.post(this.url, pageant);
+    };
+    PageantsService.prototype.updatePagenat = function (pageant) {
+        return this.apiService.put(this.url, pageant);
+    };
+    PageantsService.prototype.getPerformances = function (id) {
+        return this.apiService.get(this.url + "/" + id + "/performances")
+            .map(function (data) { return data.items; });
+    };
+    PageantsService.prototype.getCostumes = function (id) {
+        return this.apiService.get(this.url + "/" + id + "/costumes")
+            .map(function (data) { return data.items; });
     };
     return PageantsService;
 }());

@@ -26,6 +26,7 @@ namespace PageantManager.Web.Controllers.Api
       return Ok(new ItemsModel<PageantModel>(pageants));
     }
 
+    [HttpPut]
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] PageantModel model)
     {

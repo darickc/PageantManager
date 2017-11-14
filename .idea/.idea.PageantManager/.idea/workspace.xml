@@ -4,7 +4,17 @@
     <list default="true" id="b7cd595b-e366-48f0-91af-36e76657ba8a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/contentModel.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Business/Entities/PageantManagerContext.cs" afterPath="$PROJECT_DIR$/PageantManager.Business/Entities/PageantManagerContext.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Business/PageantManager.Business.csproj" afterPath="$PROJECT_DIR$/PageantManager.Business/PageantManager.Business.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs" afterPath="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/PageantManager.Web.csproj" afterPath="$PROJECT_DIR$/PageantManager.Web/PageantManager.Web.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/Startup.cs" afterPath="$PROJECT_DIR$/PageantManager.Web/Startup.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/app-routing.module.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/app-routing.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/app.component.html" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/app.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/app.module.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/index.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/services/pageants.service.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/services/pageants.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/wwwroot/inline.bundle.js.map" afterPath="$PROJECT_DIR$/PageantManager.Web/wwwroot/inline.bundle.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/wwwroot/main.bundle.js" afterPath="$PROJECT_DIR$/PageantManager.Web/wwwroot/main.bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/wwwroot/main.bundle.js.map" afterPath="$PROJECT_DIR$/PageantManager.Web/wwwroot/main.bundle.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/wwwroot/vendor.bundle.js" afterPath="$PROJECT_DIR$/PageantManager.Web/wwwroot/vendor.bundle.js" />
@@ -22,8 +32,8 @@
       <file leaf-file-name="CostumesBusiness.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+            <state relative-caret-position="195">
+              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding>
                 <marker date="1508712837708" expanded="false" signature="6:229" ph="..." />
                 <marker date="1508712837708" expanded="true" signature="273:1258" ph="{...}" />
@@ -38,48 +48,85 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageantsController.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs">
+      <file leaf-file-name="CostumeModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageantManager.Business/Models/CostumeModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CostumesController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
-                <marker date="1508711506551" expanded="false" signature="6:139" ph="..." />
-                <marker date="1508711506551" expanded="true" signature="185:853" ph="{...}" />
-                <marker date="1508711506551" expanded="true" signature="293:851" ph="{...}" />
-                <marker date="1508711506551" expanded="true" signature="420:476" ph="{...}" />
-                <marker date="1508711506551" expanded="true" signature="565:764" ph="{...}" />
-                <marker date="1508711506551" expanded="true" signature="601:705" ph="{...}" />
-                <marker date="1508711506551" expanded="true" signature="766:847" ph="/* public IActionResult Index() ... */" />
+                <marker date="1505533938000" expanded="false" signature="6:78" ph="..." />
+                <marker date="1505533938000" expanded="true" signature="120:363" ph="{...}" />
+                <marker date="1505533938000" expanded="true" signature="152:361" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PerformancesController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PerformancesController.cs">
+      <file leaf-file-name="GarmentTypeModel.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PageantManager.Business/Models/GarmentTypeModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="26" />
               <folding>
-                <marker date="1508711506554" expanded="false" signature="6:139" ph="..." />
-                <marker date="1508711506554" expanded="true" signature="185:1171" ph="{...}" />
-                <marker date="1508711506554" expanded="true" signature="301:1169" ph="{...}" />
-                <marker date="1508711506554" expanded="true" signature="448:512" ph="{...}" />
-                <marker date="1508711506554" expanded="true" signature="584:698" ph="{...}" />
-                <marker date="1508711506554" expanded="true" signature="791:998" ph="{...}" />
-                <marker date="1508711506554" expanded="true" signature="827:939" ph="{...}" />
-                <marker date="1508711506554" expanded="true" signature="1076:1164" ph="{...}" />
+                <marker date="1505533884000" expanded="true" signature="86:270" ph="{...}" />
+                <marker date="1505533884000" expanded="true" signature="122:268" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageantManager.Web/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="61" column="61" lean-forward="false" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
+              <folding>
+                <marker date="1510634702570" expanded="true" signature="6:442" ph="..." />
+                <marker date="1510634702570" expanded="true" signature="472:3629" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="497:3627" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="684:1174" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="1023:1082" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="1181:1392" ph="/* This method gets called by the runtime. Use this method to add services to the container. ... */" />
+                <marker date="1510634702570" expanded="true" signature="1455:2431" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="1524:1646" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="1657:1701" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="1752:2054" ph="{...}" />
+                <marker date="1510634702570" expanded="false" signature="2641:3623" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="2748:2869" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="2901:3023" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="3034:3168" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="3225:3615" ph="{...}" />
+                <marker date="1510634702570" expanded="true" signature="3242:3475" ph="/* uncomment for non angular SPA app, comment out code below ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageantsController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="50" column="51" lean-forward="false" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerformancesBusiness.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/PerformancesBusiness.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+              <folding>
+                <marker date="1508297334563" expanded="false" signature="6:215" ph="..." />
+                <marker date="1508297334563" expanded="true" signature="259:1487" ph="{...}" />
+                <marker date="1508297334563" expanded="true" signature="299:1485" ph="{...}" />
+                <marker date="1508297334563" expanded="true" signature="414:458" ph="{...}" />
+                <marker date="1508297334563" expanded="true" signature="534:724" ph="{...}" />
+                <marker date="1508297334563" expanded="true" signature="786:907" ph="{...}" />
+                <marker date="1508297334563" expanded="true" signature="988:1288" ph="{...}" />
+                <marker date="1508297334563" expanded="true" signature="1097:1196" ph="{...}" />
+                <marker date="1508297334563" expanded="true" signature="1335:1479" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -105,23 +152,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/GarmentType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PageantManager.Business/Models/ItemsModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/Costume.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/Garment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Web/package.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PerformancesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PageantManager.Business/Models/GarmentTypeModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Models/CostumeModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Models/PerformanceModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Models/PageantModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PageantManager.Business/Business/PageantsBusiness.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PageantManager.Business/Business/GarmentsBusiness.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PageantManager.Business/Business/PerformancesBusiness.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PageantManager.Business/Business/GarmentTypesBusiness.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/PageantManagerContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/GarmentType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/Costume.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/Garment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/Performance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Utilities/Configuration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Business/Entities/Pageant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Web/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PerformancesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -132,10 +186,14 @@
         <option value="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/Pageants.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Business/Business/PerformancesBusiness.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PerformancesController.cs" />
-        <option value="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Web/package.json" />
+        <option value="$PROJECT_DIR$/PageantManager.Business/Entities/PageantManagerContext.cs" />
+        <option value="$PROJECT_DIR$/PageantManager.Business/Entities/SeedData.cs" />
+        <option value="$PROJECT_DIR$/PageantManager.Web/PageantManager.Web.csproj" />
+        <option value="$PROJECT_DIR$/PageantManager.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs" />
       </list>
     </option>
   </component>
@@ -176,6 +234,23 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="PageantManager (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="PageantManager (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="PageantManager.Business" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="PageantManager (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="PageantManager.Business" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Entities" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="PageantManager (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="PageantManager.Business" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Utilities" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -259,7 +334,8 @@
       <workItem from="1508120324047" duration="6532000" />
       <workItem from="1508296259645" duration="3740000" />
       <workItem from="1508711578271" duration="1751000" />
-      <workItem from="1508816515881" duration="532000" />
+      <workItem from="1508816515881" duration="1269000" />
+      <workItem from="1510631308585" duration="3330000" />
     </task>
     <task id="LOCAL-00001" summary="none">
       <created>1508125757730</created>
@@ -286,7 +362,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14317000" />
+    <option name="totallyTimeSpent" value="18384000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -308,7 +384,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19107144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -321,7 +397,7 @@
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -393,9 +469,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <marker date="1508712837708" expanded="false" signature="6:229" ph="..." />
+            <marker date="1508712837708" expanded="true" signature="273:1258" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="309:1256" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="408:431" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="507:695" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="772:1056" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="873:956" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="1107:1250" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -432,20 +525,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs">
+    <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding>
-            <marker date="1508712837708" expanded="false" signature="6:229" ph="..." />
-            <marker date="1508712837708" expanded="true" signature="273:1258" ph="{...}" />
-            <marker date="1508712837708" expanded="true" signature="309:1256" ph="{...}" />
-            <marker date="1508712837708" expanded="true" signature="408:431" ph="{...}" />
-            <marker date="1508712837708" expanded="true" signature="507:695" ph="{...}" />
-            <marker date="1508712837708" expanded="true" signature="772:1056" ph="{...}" />
-            <marker date="1508712837708" expanded="true" signature="873:956" ph="{...}" />
-            <marker date="1508712837708" expanded="true" signature="1107:1250" ph="{...}" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -460,9 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -470,11 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <marker date="1505355204000" expanded="true" signature="16:616" ph="&lt;html.../&gt;" />
-            <marker date="1505355204000" expanded="true" signature="33:244" ph="&lt;head.../&gt;" />
-            <marker date="1505355204000" expanded="true" signature="245:608" ph="&lt;body.../&gt;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -482,7 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -490,18 +565,237 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PerformancesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="41" />
           <folding>
-            <marker date="1505355204000" expanded="true" signature="0:119" ph="@*...*@" />
-            <marker date="1505355204000" expanded="true" signature="120:124" ph="@..." />
+            <marker date="1508711506554" expanded="false" signature="6:139" ph="..." />
+            <marker date="1508711506554" expanded="true" signature="185:1171" ph="{...}" />
+            <marker date="1508711506554" expanded="true" signature="301:1169" ph="{...}" />
+            <marker date="1508711506554" expanded="true" signature="448:512" ph="{...}" />
+            <marker date="1508711506554" expanded="true" signature="584:698" ph="{...}" />
+            <marker date="1508711506554" expanded="true" signature="791:998" ph="{...}" />
+            <marker date="1508711506554" expanded="true" signature="827:939" ph="{...}" />
+            <marker date="1508711506554" expanded="true" signature="1076:1164" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <marker date="1508711506551" expanded="false" signature="6:139" ph="..." />
+            <marker date="1508711506551" expanded="true" signature="185:853" ph="{...}" />
+            <marker date="1508711506551" expanded="true" signature="293:851" ph="{...}" />
+            <marker date="1508711506551" expanded="true" signature="420:476" ph="{...}" />
+            <marker date="1508711506551" expanded="true" signature="565:764" ph="{...}" />
+            <marker date="1508711506551" expanded="true" signature="601:705" ph="{...}" />
+            <marker date="1508711506551" expanded="true" signature="766:847" ph="/* public IActionResult Index() ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Utilities/Configuration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="43" />
+          <folding>
+            <marker date="1505534200000" expanded="false" signature="6:95" ph="..." />
+            <marker date="1505534200000" expanded="true" signature="140:667" ph="{...}" />
+            <marker date="1505534200000" expanded="true" signature="180:665" ph="{...}" />
+            <marker date="1505534200000" expanded="true" signature="222:658" ph="{...}" />
+            <marker date="1505534200000" expanded="true" signature="267:646" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Entities/Pageant.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <marker date="1505530422000" expanded="false" signature="6:58" ph="..." />
+            <marker date="1505530422000" expanded="true" signature="102:268" ph="{...}" />
+            <marker date="1505530422000" expanded="true" signature="129:266" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Entities/SeedData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Entities/Performance.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1505533111000" expanded="false" signature="6:58" ph="..." />
+            <marker date="1505533111000" expanded="true" signature="102:586" ph="{...}" />
+            <marker date="1505533111000" expanded="true" signature="133:584" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Entities/PageantManagerContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1510633813121" expanded="true" signature="80:599" ph="{...}" />
+            <marker date="1510633813121" expanded="true" signature="133:597" ph="{...}" />
+            <marker date="1510633813121" expanded="true" signature="249:261" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Web/PageantManager.Web.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Web/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="61" column="61" lean-forward="false" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
+          <folding>
+            <marker date="1510634702570" expanded="true" signature="6:442" ph="..." />
+            <marker date="1510634702570" expanded="true" signature="472:3629" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="497:3627" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="684:1174" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="1023:1082" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="1181:1392" ph="/* This method gets called by the runtime. Use this method to add services to the container. ... */" />
+            <marker date="1510634702570" expanded="true" signature="1455:2431" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="1524:1646" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="1657:1701" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="1752:2054" ph="{...}" />
+            <marker date="1510634702570" expanded="false" signature="2641:3623" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="2748:2869" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="2901:3023" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="3034:3168" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="3225:3615" ph="{...}" />
+            <marker date="1510634702570" expanded="true" signature="3242:3475" ph="/* uncomment for non angular SPA app, comment out code below ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Models/PageantModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1505531031000" expanded="true" signature="86:225" ph="{...}" />
+            <marker date="1505531031000" expanded="true" signature="118:223" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/PageantsBusiness.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding>
+            <marker date="1505531375000" expanded="false" signature="6:215" ph="..." />
+            <marker date="1505531375000" expanded="true" signature="259:1519" ph="{...}" />
+            <marker date="1505531375000" expanded="true" signature="295:1517" ph="{...}" />
+            <marker date="1505531375000" expanded="true" signature="406:450" ph="{...}" />
+            <marker date="1505531375000" expanded="true" signature="511:675" ph="{...}" />
+            <marker date="1505531375000" expanded="true" signature="735:870" ph="{...}" />
+            <marker date="1505531375000" expanded="true" signature="945:1295" ph="{...}" />
+            <marker date="1505531375000" expanded="true" signature="1061:1174" ph="{...}" />
+            <marker date="1505531375000" expanded="true" signature="1344:1511" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Models/PerformanceModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <marker date="1505533605000" expanded="false" signature="6:58" ph="..." />
+            <marker date="1505533605000" expanded="true" signature="100:483" ph="{...}" />
+            <marker date="1505533605000" expanded="true" signature="136:481" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/PerformancesBusiness.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <marker date="1508297334563" expanded="false" signature="6:215" ph="..." />
+            <marker date="1508297334563" expanded="true" signature="259:1487" ph="{...}" />
+            <marker date="1508297334563" expanded="true" signature="299:1485" ph="{...}" />
+            <marker date="1508297334563" expanded="true" signature="414:458" ph="{...}" />
+            <marker date="1508297334563" expanded="true" signature="534:724" ph="{...}" />
+            <marker date="1508297334563" expanded="true" signature="786:907" ph="{...}" />
+            <marker date="1508297334563" expanded="true" signature="988:1288" ph="{...}" />
+            <marker date="1508297334563" expanded="true" signature="1097:1196" ph="{...}" />
+            <marker date="1508297334563" expanded="true" signature="1335:1479" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/PageantsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="750">
+          <caret line="50" column="51" lean-forward="false" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <marker date="1508712837708" expanded="false" signature="6:229" ph="..." />
+            <marker date="1508712837708" expanded="true" signature="273:1258" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="309:1256" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="408:431" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="507:695" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="772:1056" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="873:956" ph="{...}" />
+            <marker date="1508712837708" expanded="true" signature="1107:1250" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Models/CostumeModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <marker date="1505533938000" expanded="false" signature="6:78" ph="..." />
+            <marker date="1505533938000" expanded="true" signature="120:363" ph="{...}" />
+            <marker date="1505533938000" expanded="true" signature="152:361" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Business/Models/GarmentTypeModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <marker date="1505533884000" expanded="true" signature="86:270" ph="{...}" />
+            <marker date="1505533884000" expanded="true" signature="122:268" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

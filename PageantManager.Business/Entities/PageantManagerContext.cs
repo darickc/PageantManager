@@ -14,5 +14,6 @@ namespace PageantManager.Business.Entities
         public DbSet<GarmentType> GarmentTypes { get; set; }
         public DbSet<Pageant> Pageants { get; set; }
         public DbSet<Performance> Performances { get; set; }
+
     }
 }
