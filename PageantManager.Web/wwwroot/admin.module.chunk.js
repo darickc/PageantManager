@@ -30,7 +30,7 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -46,16 +46,16 @@ var AdminComponent = (function () {
     }
     AdminComponent.prototype.ngOnInit = function () {
     };
+    AdminComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-admin',
+            template: __webpack_require__("../../../../../src/app/admin/admin.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/admin/admin.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AdminComponent);
     return AdminComponent;
 }());
-AdminComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-admin',
-        template: __webpack_require__("../../../../../src/app/admin/admin.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/admin/admin.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], AdminComponent);
 
 //# sourceMappingURL=admin.component.js.map
 
@@ -67,8 +67,8 @@ AdminComponent = __decorate([
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminModule", function() { return AdminModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_shared_module__ = __webpack_require__("../../../../../src/app/shared/shared.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__admin_component__ = __webpack_require__("../../../../../src/app/admin/admin.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pageants_pageants_component__ = __webpack_require__("../../../../../src/app/admin/pageants/pageants.component.ts");
@@ -103,18 +103,18 @@ var routes = [
 var AdminModule = (function () {
     function AdminModule() {
     }
+    AdminModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */].forChild(routes),
+                __WEBPACK_IMPORTED_MODULE_2__shared_shared_module__["a" /* SharedModule */],
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__admin_component__["a" /* AdminComponent */], __WEBPACK_IMPORTED_MODULE_4__pageants_pageants_component__["a" /* PageantsComponent */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */]]
+        })
+    ], AdminModule);
     return AdminModule;
 }());
-AdminModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */].forChild(routes),
-            __WEBPACK_IMPORTED_MODULE_2__shared_shared_module__["a" /* SharedModule */],
-        ],
-        declarations: [__WEBPACK_IMPORTED_MODULE_3__admin_component__["a" /* AdminComponent */], __WEBPACK_IMPORTED_MODULE_4__pageants_pageants_component__["a" /* PageantsComponent */]],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */]]
-    })
-], AdminModule);
 
 //# sourceMappingURL=admin.module.js.map
 
@@ -150,7 +150,7 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageantsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -166,16 +166,16 @@ var PageantsComponent = (function () {
     }
     PageantsComponent.prototype.ngOnInit = function () {
     };
+    PageantsComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-pageants',
+            template: __webpack_require__("../../../../../src/app/admin/pageants/pageants.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/admin/pageants/pageants.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], PageantsComponent);
     return PageantsComponent;
 }());
-PageantsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-pageants',
-        template: __webpack_require__("../../../../../src/app/admin/pageants/pageants.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/admin/pageants/pageants.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], PageantsComponent);
 
 //# sourceMappingURL=pageants.component.js.map
 
