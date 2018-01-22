@@ -1,4 +1,5 @@
 import { Garment } from './garment';
+import { GarmentMeasurementType } from './garment-measurement-type';
 
 export class GarmentType {
   garmentTypeId: number;
@@ -6,4 +7,5 @@ export class GarmentType {
   description: string;
   photo: string;
   garments: Garment[];
+  garmentMeasurementTypes: GarmentMeasurementType[];
 }

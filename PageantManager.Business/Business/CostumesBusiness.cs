@@ -40,6 +40,12 @@ namespace PageantManager.Business.Business
 		    var costumes = await _ctx.Costumes.OrderBy(g => g.Name).ToListAsync();
 		    return Mapper.Map<List<CostumeModel>>(costumes);
 	    }
+	    
+	    public async Task<CostumeModel> GetCostume(int id)
+	    {
+		    var costume = await _ctx.Costumes.FindAsync(id);
+		    return costume != null ? Mapper.Map<CostumeModel>(costume) : null;
+	    }
 
 	    public async Task<CostumeModel> GetCostume(int id, List<MeasurementModel> measurements)
 	    {
@@ -76,6 +82,7 @@ namespace PageantManager.Business.Business
 
 		    await _ctx.SaveChangesAsync();
 
+		    Mapper.Map(costume, model);
 		    return model;
 	    }
 	    

@@ -4,6 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { AdminComponent } from './admin.component';
 import { PageantsComponent } from './pageants/pageants.component';
+import { CostumesComponent } from './costumes/costumes.component';
+import { CostumeComponent } from './costume/costume.component';
+import { GarmentTypesComponent } from './garment-types/garment-types.component';
+import { GarmentTypeComponent } from './garment-type/garment-type.component';
 
 const routes: Routes = [
   {
@@ -18,6 +22,26 @@ const routes: Routes = [
         path: 'pageants',
         component: PageantsComponent,
         data: { title: 'Pageants' }
+      },
+      {
+        path: 'costumes',
+        component: CostumesComponent,
+        data: { title: 'Costumes' }
+      },
+      {
+        path: 'costumes/:id',
+        component: CostumeComponent,
+        data: { title: 'Costume' }
+      },
+      {
+        path: 'garment-types',
+        component: GarmentTypesComponent,
+        data: { title: 'Garment Types' }
+      },
+      {
+        path: 'garment-types/:id',
+        component: GarmentTypeComponent,
+        data: { title: 'Garment Type' }
       }
     ]
   }
@@ -28,7 +52,13 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     SharedModule,
   ],
-  declarations: [AdminComponent, PageantsComponent],
+  declarations: [
+    AdminComponent,
+    PageantsComponent,
+    CostumesComponent,
+    CostumeComponent,
+    GarmentTypesComponent,
+    GarmentTypeComponent],
   exports: [RouterModule]
 })
 export class AdminModule { }

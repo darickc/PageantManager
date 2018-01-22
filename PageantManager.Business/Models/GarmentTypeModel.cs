@@ -16,5 +16,7 @@ namespace PageantManager.Business.Models
 
 //	    public List<CostumeGarmentModel> CostumeGarments { get; set; }
 	    public List<GarmentModel> Garments { get; set; }
+
+	    public List<GarmentMeasurementTypeModel> GarmentMeasurementTypes { get; set; }
     }
 }

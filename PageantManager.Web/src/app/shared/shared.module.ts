@@ -7,15 +7,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatButtonModule,
   MatCheckboxModule,
-  MatInputModule
+  MatInputModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 import {
-  // ApiService,
-  // PageantsService
   CostumesService,
+  GarmentTypesService,
   MeasurementTypesService
  } from './services';
+import { LoadingComponent } from './components/loading/loading.component';
+import { FilePickerDirective } from './directives/file-picker.directive';
 
 @NgModule({
   imports: [
@@ -25,7 +27,8 @@ import {
     RouterModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     CommonModule,
@@ -34,13 +37,18 @@ import {
     RouterModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    LoadingComponent,
+    FilePickerDirective
   ],
-  declarations: [],
+  declarations: [
+    LoadingComponent,
+    FilePickerDirective
+  ],
   providers: [
-    // ApiService,
-    // PageantsService
     CostumesService,
+    GarmentTypesService,
     MeasurementTypesService
   ]
 })

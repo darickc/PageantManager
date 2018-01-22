@@ -4,8 +4,15 @@ using System.Collections.Generic;
 
 namespace PageantManager.Web.Migrations
 {
+  /// <summary>
+  ///
+  /// </summary>
     public partial class InitialCreate : Migration
     {
+      /// <summary>
+      ///
+      /// </summary>
+      /// <param name="migrationBuilder"></param>
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -202,6 +209,10 @@ namespace PageantManager.Web.Migrations
                 column: "GarmentTypeId");
         }
 
+      /// <summary>
+      ///
+      /// </summary>
+      /// <param name="migrationBuilder"></param>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

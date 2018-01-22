@@ -6,3 +6,5 @@ export * from './garment-type';
 export * from './garment';
 export * from './measurement-type';
 export * from './measurement';
+export * from './picked-file';
+export * from './read-mode';

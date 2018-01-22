@@ -1,0 +1,15 @@
+<h2>Garment Type <span *ngIf="newGarmentType">- New</span></h2>
+
+<form [formGroup]="form" novalidate (submit)="submit()">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Name" formControlName="name" maxlength="50" />
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput type="text" placeholder="Description" formControlName="description" maxlength="250" />
+    </mat-form-field>
+    <img *ngIf="form.controls['photo'].value" [src]="form.controls['photo'].value" alt="">
+    <button mat-button appFilePicker (filePick)='fileSelected($event)' accept=".jpg">Select Photo</button>
+  <button mat-button color="primary" [disabled]='loading'>
+    <app-loading *ngIf="loading" size="xsm"></app-loading>
+    Save</button>
+</form>

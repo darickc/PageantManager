@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
@@ -16,10 +17,19 @@ namespace PageantManager.Business.Business
 			_ctx = ctx;
 		}
 
-	    public async Task<GarmentTypeModel> GetGarmentTypes()
+	    public async Task<List<GarmentTypeModel>> GetGarmentTypes()
 	    {
 		    var garmentTypes = await _ctx.GarmentTypes.OrderBy(g => g.Name).ToListAsync();
-		    return Mapper.Map<GarmentTypeModel>(garmentTypes);
+		    return Mapper.Map<List<GarmentTypeModel>>(garmentTypes);
+	    }
+
+	    public async Task<GarmentTypeModel> GetGarmentType(int id)
+	    {
+		    var garmentType = await _ctx.GarmentTypes
+			    .Include(gt => gt.GarmentMeasurementTypes)
+			    .Include(t=>t.GarmentMeasurementTypes)
+			    .SingleOrDefaultAsync(gt => gt.GarmentTypeId == id);
+		    return Mapper.Map<GarmentTypeModel>(garmentType);
 	    }
 	    
 	    public async Task<GarmentTypeModel> UpdateGarmentType(GarmentTypeModel model)

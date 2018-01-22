@@ -15,6 +15,10 @@ export class CostumesService {
     return this.http.get<Costume[]>(this.url);
   }
 
+  getCostume(id: number): Observable<Costume> {
+    return this.http.get<Costume>(`${this.url}/${id}`);
+  }
+
   searchCostumes(measurements: Measurement[]): Observable<Costume[]> {
     return this.http.post<Costume[]>(`${this.url}/search`, measurements);
   }

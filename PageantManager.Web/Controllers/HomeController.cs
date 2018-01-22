@@ -4,8 +4,12 @@
 
 namespace PageantManager.Web.Controllers
 {
+  /// <summary>
+  ///
+  /// </summary>
     public class HomeController : Controller
     {
+      ///
         // GET: /<controller>/
         public IActionResult Index()
         {

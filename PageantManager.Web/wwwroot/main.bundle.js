@@ -341,6 +341,253 @@ exports.HomeModule = HomeModule;
 
 /***/ }),
 
+/***/ "../../../../../src/app/shared/components/loading/loading.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "mat-progress-spinner {\n  display: inline-block; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/components/loading/loading.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
+var LoadingComponent = /** @class */ (function () {
+    function LoadingComponent() {
+    }
+    LoadingComponent.prototype.ngOnInit = function () {
+        switch (this.size) {
+            case 'xsm':
+                this.diameter = 16;
+                break;
+            case 'sm':
+                this.diameter = 22;
+                break;
+            default:
+                this.diameter = 35;
+                break;
+        }
+    };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], LoadingComponent.prototype, "size", void 0);
+    LoadingComponent = __decorate([
+        core_1.Component({
+            selector: 'app-loading',
+            template: "<mat-progress-spinner mode=\"indeterminate\" [diameter]='diameter'></mat-progress-spinner>",
+            styles: [__webpack_require__("../../../../../src/app/shared/components/loading/loading.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LoadingComponent);
+    return LoadingComponent;
+}());
+exports.LoadingComponent = LoadingComponent;
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/directives/file-picker.directive.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
+var picked_file_1 = __webpack_require__("../../../../../src/app/shared/models/picked-file.ts");
+// import { PickedFileImpl } from './picked-file-impl';
+var read_mode_1 = __webpack_require__("../../../../../src/app/shared/models/read-mode.ts");
+var FilePickerDirective = /** @class */ (function () {
+    function FilePickerDirective(el, renderer) {
+        this.el = el;
+        this.renderer = renderer;
+        this.accept = '';
+        this.filePick = new core_1.EventEmitter();
+        this.readStart = new core_1.EventEmitter();
+        this.readEnd = new core_1.EventEmitter();
+    }
+    Object.defineProperty(FilePickerDirective.prototype, "multiple", {
+        get: function () { return this._multiple; },
+        set: function (value) { this._multiple = coerceBooleanProperty(value); },
+        enumerable: true,
+        configurable: true
+    });
+    FilePickerDirective.prototype.ngOnInit = function () {
+        var _this = this;
+        this.input = this.renderer.createElement('input');
+        this.renderer.appendChild(this.el.nativeElement, this.input);
+        this.renderer.setAttribute(this.input, 'type', 'file');
+        this.renderer.setAttribute(this.input, 'accept', this.accept);
+        this.renderer.setStyle(this.input, 'display', 'none');
+        if (this.multiple) {
+            this.renderer.setAttribute(this.input, 'multiple', 'multiple');
+        }
+        this.renderer.listen(this.input, 'change', function (event) {
+            var fileCount = event.target.files.length;
+            _this.readStart.emit(event.target.files.length);
+            Promise.all(Array.from(event.target.files).map(function (file) { return _this.readFile(file); }))
+                .then(function () { return _this.readEnd.emit(fileCount); });
+        });
+    };
+    FilePickerDirective.prototype.reset = function () {
+        if (!this.input) {
+            console.error('It seems that ngOnInit() has not been executed or that the hidden input element is null. Did you mess with the DOM?');
+            return;
+        }
+        this.input.value = null;
+    };
+    FilePickerDirective.prototype.browse = function () {
+        if (!this.input) {
+            console.error('It seems that ngOnInit() has not been executed or that the hidden input element is null. Did you mess with the DOM?');
+            return;
+        }
+        this.input.click();
+    };
+    FilePickerDirective.prototype.readFile = function (file) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            reader.onload = function (loaded) {
+                var fileReader = loaded.target;
+                var pickedFile = new picked_file_1.PickedFile(file.lastModifiedDate, file.name, file.size, file.type, _this.readMode, fileReader.result);
+                _this.filePick.emit(pickedFile);
+                resolve();
+            };
+            switch (_this.readMode) {
+                case read_mode_1.ReadMode.arrayBuffer:
+                    reader.readAsArrayBuffer(file);
+                    break;
+                case read_mode_1.ReadMode.binaryString:
+                    reader.readAsBinaryString(file);
+                    break;
+                case read_mode_1.ReadMode.text:
+                    reader.readAsText(file);
+                    break;
+                case read_mode_1.ReadMode.dataURL:
+                default:
+                    reader.readAsDataURL(file);
+                    break;
+            }
+        });
+    };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], FilePickerDirective.prototype, "accept", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
+    ], FilePickerDirective.prototype, "multiple", null);
+    __decorate([
+        core_1.Input('appFilePicker'),
+        __metadata("design:type", Number)
+    ], FilePickerDirective.prototype, "readMode", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], FilePickerDirective.prototype, "filePick", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], FilePickerDirective.prototype, "readStart", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], FilePickerDirective.prototype, "readEnd", void 0);
+    __decorate([
+        core_1.HostListener('click'),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], FilePickerDirective.prototype, "browse", null);
+    FilePickerDirective = __decorate([
+        core_1.Directive({
+            selector: '[appFilePicker]'
+        }),
+        __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer2])
+    ], FilePickerDirective);
+    return FilePickerDirective;
+}());
+exports.FilePickerDirective = FilePickerDirective;
+function coerceBooleanProperty(value) {
+    return value != null && "" + value !== 'false';
+}
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/models/picked-file.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var PickedFile = /** @class */ (function () {
+    function PickedFile(lastModifiedDate, name, size, type, readMode, content) {
+        this.lastModifiedDate = lastModifiedDate;
+        this.name = name;
+        this.size = size;
+        this.type = type;
+        this.readMode = readMode;
+        this.content = content;
+    }
+    return PickedFile;
+}());
+exports.PickedFile = PickedFile;
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/models/read-mode.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var ReadMode;
+(function (ReadMode) {
+    ReadMode[ReadMode["arrayBuffer"] = 0] = "arrayBuffer";
+    ReadMode[ReadMode["binaryString"] = 1] = "binaryString";
+    ReadMode[ReadMode["dataURL"] = 2] = "dataURL";
+    ReadMode[ReadMode["text"] = 3] = "text";
+})(ReadMode = exports.ReadMode || (exports.ReadMode = {}));
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/shared/services/costumes.service.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -366,6 +613,9 @@ var CostumesService = /** @class */ (function () {
     CostumesService.prototype.getCostumes = function () {
         return this.http.get(this.url);
     };
+    CostumesService.prototype.getCostume = function (id) {
+        return this.http.get(this.url + "/" + id);
+    };
     CostumesService.prototype.searchCostumes = function (measurements) {
         return this.http.post(this.url + "/search", measurements);
     };
@@ -386,6 +636,51 @@ exports.CostumesService = CostumesService;
 
 /***/ }),
 
+/***/ "../../../../../src/app/shared/services/garment-types.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
+var http_1 = __webpack_require__("../../../common/esm5/http.js");
+var GarmentTypesService = /** @class */ (function () {
+    function GarmentTypesService(http) {
+        this.http = http;
+        this.url = 'api/garment-types';
+    }
+    GarmentTypesService.prototype.getGarmentTypes = function () {
+        return this.http.get(this.url);
+    };
+    GarmentTypesService.prototype.getGarmentType = function (id) {
+        return this.http.get(this.url + "/" + id);
+    };
+    GarmentTypesService.prototype.createGarmentType = function (costume) {
+        return this.http.post("" + this.url, costume);
+    };
+    GarmentTypesService.prototype.updateGarmentType = function (costume) {
+        return this.http.put("" + this.url, costume);
+    };
+    GarmentTypesService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient])
+    ], GarmentTypesService);
+    return GarmentTypesService;
+}());
+exports.GarmentTypesService = GarmentTypesService;
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/shared/services/index.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -396,6 +691,7 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__("../../../../../src/app/shared/services/costumes.service.ts"));
+__export(__webpack_require__("../../../../../src/app/shared/services/garment-types.service.ts"));
 __export(__webpack_require__("../../../../../src/app/shared/services/measurement-types.service.ts"));
 
 
@@ -462,6 +758,8 @@ var http_1 = __webpack_require__("../../../common/esm5/http.js");
 var forms_1 = __webpack_require__("../../../forms/esm5/forms.js");
 var material_1 = __webpack_require__("../../../material/esm5/material.es5.js");
 var services_1 = __webpack_require__("../../../../../src/app/shared/services/index.ts");
+var loading_component_1 = __webpack_require__("../../../../../src/app/shared/components/loading/loading.component.ts");
+var file_picker_directive_1 = __webpack_require__("../../../../../src/app/shared/directives/file-picker.directive.ts");
 var SharedModule = /** @class */ (function () {
     function SharedModule() {
     }
@@ -474,7 +772,8 @@ var SharedModule = /** @class */ (function () {
                 router_1.RouterModule,
                 forms_1.ReactiveFormsModule,
                 material_1.MatInputModule,
-                material_1.MatButtonModule
+                material_1.MatButtonModule,
+                material_1.MatProgressSpinnerModule
             ],
             exports: [
                 common_1.CommonModule,
@@ -483,13 +782,18 @@ var SharedModule = /** @class */ (function () {
                 router_1.RouterModule,
                 forms_1.ReactiveFormsModule,
                 material_1.MatInputModule,
-                material_1.MatButtonModule
+                material_1.MatButtonModule,
+                material_1.MatProgressSpinnerModule,
+                loading_component_1.LoadingComponent,
+                file_picker_directive_1.FilePickerDirective
             ],
-            declarations: [],
+            declarations: [
+                loading_component_1.LoadingComponent,
+                file_picker_directive_1.FilePickerDirective
+            ],
             providers: [
-                // ApiService,
-                // PageantsService
                 services_1.CostumesService,
+                services_1.GarmentTypesService,
                 services_1.MeasurementTypesService
             ]
         })

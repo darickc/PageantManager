@@ -16,12 +16,22 @@ using Swashbuckle.AspNetCore.Swagger;
 
 namespace PageantManager.Web
 {
+  /// <summary>
+  ///
+  /// </summary>
   public class Startup
   {
     private readonly IHostingEnvironment _env;
     readonly string _contentRootPath;
+    /// <summary>
+    ///
+    /// </summary>
     public IConfigurationRoot Configuration { get; }
 
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="env"></param>
     public Startup(IHostingEnvironment env)
     {
       _env = env;
@@ -39,7 +49,7 @@ namespace PageantManager.Web
       _contentRootPath = env.ContentRootPath;
     }
 
-
+     ///
     // This method gets called by the runtime. Use this method to add services to the container.
     // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
     public void ConfigureServices(IServiceCollection services)
@@ -92,6 +102,7 @@ namespace PageantManager.Web
 
     }
 
+    ///
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
     {

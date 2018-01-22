@@ -14,6 +14,10 @@ namespace PageantManager.Web.Migrations
     [Migration("20180122044548_InitialCreate")]
     partial class InitialCreate
     {
+      /// <summary>
+      ///
+      /// </summary>
+      /// <param name="modelBuilder"></param>
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

@@ -22,6 +22,7 @@ namespace PageantManager.Business.Utilities
                 x.CreateMap<CostumeGarment, CostumeGarmentModel>().ReverseMap();
                 x.CreateMap<Garment, GarmentModel>().ReverseMap();
                 x.CreateMap<GarmentMeasurement, GarmentMeasurementModel>().ReverseMap();
+	            x.CreateMap<GarmentMeasurementType, GarmentMeasurementTypeModel>().ReverseMap();
                 x.CreateMap<GarmentType, GarmentTypeModel>().ReverseMap();
                 x.CreateMap<MeasurementType, MeasurementTypeModel>().ReverseMap();
             });
@@ -31,7 +32,7 @@ namespace PageantManager.Business.Utilities
 		{
 			services.AddScoped<CostumesBusiness>();
 			services.AddScoped<MeasurementTypesBusiness>();
-			
+			services.AddScoped<GarmentTypesBusiness>();
 		}
 
     }

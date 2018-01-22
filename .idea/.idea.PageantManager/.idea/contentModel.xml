@@ -87,6 +87,7 @@
         <e p="Controllers" t="Include">
           <e p="Api" t="Include">
             <e p="CostumesController.cs" t="Include" />
+            <e p="GarmentTypesController.cs" t="Include" />
             <e p="MeasuremntTypesController.cs" t="Include" />
             <e p="PageantsController.cs" t="Include" />
             <e p="PerformancesController.cs" t="Include" />
@@ -128,6 +129,26 @@
               <e p="admin.component.spec.ts" t="Include" />
               <e p="admin.component.ts" t="Include" />
               <e p="admin.module.ts" t="Include" />
+              <e p="costume" t="Include">
+                <e p="costume.component.html" t="Include" />
+                <e p="costume.component.scss" t="Include" />
+                <e p="costume.component.ts" t="Include" />
+              </e>
+              <e p="costumes" t="Include">
+                <e p="costumes.component.html" t="Include" />
+                <e p="costumes.component.scss" t="Include" />
+                <e p="costumes.component.ts" t="Include" />
+              </e>
+              <e p="garment-type" t="Include">
+                <e p="garment-type.component.html" t="Include" />
+                <e p="garment-type.component.scss" t="Include" />
+                <e p="garment-type.component.ts" t="Include" />
+              </e>
+              <e p="garment-types" t="Include">
+                <e p="garment-types.component.html" t="Include" />
+                <e p="garment-types.component.scss" t="Include" />
+                <e p="garment-types.component.ts" t="Include" />
+              </e>
               <e p="pageants" t="Include">
                 <e p="pageants.component.html" t="Include" />
                 <e p="pageants.component.scss" t="Include" />
@@ -147,6 +168,16 @@
               <e p="home.module.ts" t="Include" />
             </e>
             <e p="Shared" t="Include">
+              <e p="components" t="Include">
+                <e p="loading" t="Include">
+                  <e p="loading.component.html" t="Include" />
+                  <e p="loading.component.scss" t="Include" />
+                  <e p="loading.component.ts" t="Include" />
+                </e>
+              </e>
+              <e p="directives" t="Include">
+                <e p="file-picker.directive.ts" t="Include" />
+              </e>
               <e p="index.ts" t="Include" />
               <e p="Models" t="Include">
                 <e p="costume-garment.ts" t="Include" />
@@ -158,10 +189,13 @@
                 <e p="index.ts" t="Include" />
                 <e p="measurement-type.ts" t="Include" />
                 <e p="measurement.ts" t="Include" />
+                <e p="picked-file.ts" t="Include" />
+                <e p="read-mode.ts" t="Include" />
               </e>
               <e p="services" t="Include">
                 <e p="api.service.ts" t="Include" />
                 <e p="costumes.service.ts" t="Include" />
+                <e p="garment-types.service.ts" t="Include" />
                 <e p="index.ts" t="Include" />
                 <e p="measurement-types.service.ts" t="Include" />
                 <e p="pageants.service.ts" t="Include" />
