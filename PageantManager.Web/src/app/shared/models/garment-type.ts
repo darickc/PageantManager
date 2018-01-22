@@ -1,5 +1,9 @@
+import { Garment } from './garment';
+
 export class GarmentType {
   garmentTypeId: number;
-  pageantId: number;
   name: string;
+  description: string;
+  photo: string;
+  garments: Garment[];
 }

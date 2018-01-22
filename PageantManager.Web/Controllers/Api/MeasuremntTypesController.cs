@@ -25,7 +25,7 @@ namespace PageantManager.Web.Controllers.Api
     }
 
     /// <summary>
-    /// Get Measurement Types
+    /// Get Measurement Typesng g
     /// </summary>
     /// <returns></returns>
     [HttpGet]

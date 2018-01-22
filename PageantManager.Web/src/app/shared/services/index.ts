@@ -1,2 +1,2 @@
-// export * from './api.service';
-export * from './pageants.service';
+export * from './costumes.service';
+export * from './measurement-types.service';

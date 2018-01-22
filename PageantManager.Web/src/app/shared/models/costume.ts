@@ -1,9 +1,9 @@
-import { GarmentType } from './garment-type';
+import { CostumeGarment } from './costume-garment';
 
 export class Costume {
   costumeId: number;
   description: string;
   name: string;
   photo: string;
-  garmentTypes: GarmentType[];
+  costumeGarments: CostumeGarment[];
 }

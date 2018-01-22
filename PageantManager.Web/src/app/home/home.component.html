@@ -1,3 +1,21 @@
-<p>
-  home works!
-</p>
+<!-- <div *ngFor="let m of measurements">
+  <mat-form-field>
+    <input matInput type="number" [placeholder]="m.measurementType.name" [ngMo]  />
+  </mat-form-field>
+</div> -->
+<div *ngIf="loading">
+  loading
+</div>
+<div *ngIf="!loading">
+
+  <form [formGroup]="form" novalidate (submit)="submit()">
+    <div formArrayName="measurements" *ngFor="let m of formArray.controls; let i=index">
+      <div [formGroupName]="i">
+        <mat-form-field>
+          <input matInput type="number" [placeholder]="measurementTypes[i].name" formControlName="value" />
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-button color="primary">Search</button>
+  </form>
+</div>

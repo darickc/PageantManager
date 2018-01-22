@@ -55,6 +55,7 @@ namespace PageantManager.Web.Controllers.Api
     /// <param name="model"></param>
     /// <returns></returns>
     [HttpPost]
+    [HttpPut]
     [ProducesResponseType(typeof(CostumeModel), 200)]
     public async Task<IActionResult> Post([FromBody] CostumeModel model)
     {

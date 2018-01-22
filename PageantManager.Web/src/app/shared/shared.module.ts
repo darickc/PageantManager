@@ -5,8 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatInputModule
+} from '@angular/material';
+
+import {
   // ApiService,
-  PageantsService
+  // PageantsService
+  CostumesService,
+  MeasurementTypesService
  } from './services';
 
 @NgModule({
@@ -15,7 +23,9 @@ import {
     FormsModule,
     HttpClientModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   exports: [
     CommonModule,
@@ -23,11 +33,15 @@ import {
     HttpClientModule,
     RouterModule,
     ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   declarations: [],
   providers: [
     // ApiService,
-    PageantsService
+    // PageantsService
+    CostumesService,
+    MeasurementTypesService
   ]
 })
 export class SharedModule { }

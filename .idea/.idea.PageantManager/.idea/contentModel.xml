@@ -158,12 +158,12 @@
                 <e p="index.ts" t="Include" />
                 <e p="measurement-type.ts" t="Include" />
                 <e p="measurement.ts" t="Include" />
-                <e p="pageant.ts" t="Include" />
-                <e p="performance.ts" t="Include" />
               </e>
               <e p="services" t="Include">
                 <e p="api.service.ts" t="Include" />
+                <e p="costumes.service.ts" t="Include" />
                 <e p="index.ts" t="Include" />
+                <e p="measurement-types.service.ts" t="Include" />
                 <e p="pageants.service.ts" t="Include" />
               </e>
               <e p="shared.module.ts" t="Include" />
