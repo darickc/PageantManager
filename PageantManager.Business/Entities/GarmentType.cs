@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace PageantManager.Business.Entities
@@ -7,8 +8,16 @@ namespace PageantManager.Business.Entities
     {
         [Key]
         public int GarmentTypeId { get; set; }
-        public int PageantId { get; set; }
+        
         [StringLength(75)]
         public string Name { get; set; }
+
+        [StringLength(200)]
+        public string Description { get; set; }
+        
+        public string Photo { get; set; }
+
+        public List<CostumeGarment> CostumeGarments { get; set; }
+        public List<Garment> Garments { get; set; }
     }
 }

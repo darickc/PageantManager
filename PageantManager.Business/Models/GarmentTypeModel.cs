@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PageantManager.Business.Models
 {
@@ -8,5 +9,12 @@ namespace PageantManager.Business.Models
 		public int PageantId { get; set; }
 		[StringLength(75)]
 		public string Name { get; set; }
+	    [StringLength(200)]
+	    public string Description { get; set; }
+        
+	    public string Photo { get; set; }
+
+//	    public List<CostumeGarmentModel> CostumeGarments { get; set; }
+	    public List<GarmentModel> Garments { get; set; }
     }
 }

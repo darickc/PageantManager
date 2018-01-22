@@ -8,12 +8,13 @@ namespace PageantManager.Business.Entities
         : base(options)
         { }
 
-		//public DbSet<Applicant> Applicants { get; set; }
 		public DbSet<Costume> Costumes { get; set; }
+        public DbSet<CostumeGarment> CostumeGarments { get; set; }
         public DbSet<Garment> Garments { get; set; }
+        public DbSet<GarmentMeasurement> GarmentMeasurements { get; set; }
+        public DbSet<GarmentMeasurementType> GarmentMeasurementTypes { get; set; }
         public DbSet<GarmentType> GarmentTypes { get; set; }
-        public DbSet<Pageant> Pageants { get; set; }
-        public DbSet<Performance> Performances { get; set; }
+        public DbSet<MeasurementType> MeasurementTypes { get; set; }
 
     }
 }

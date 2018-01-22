@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.IO;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Rewrite;
@@ -6,10 +7,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PageantManager.Business.Business;
 using PageantManager.Business.Entities;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace PageantManager.Web
 {
@@ -59,14 +62,33 @@ namespace PageantManager.Web
         options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
       });
 
+      services.AddSwaggerGen(c =>
+      {
+        c.SwaggerDoc("v1", new Info
+        {
+          Version = "v1",
+          Title = "Pageant Manager API",
+          Description = "API for Pageant Manager",
+          TermsOfService = "None",
+          Contact = new Contact { Name = "Darick Carpenter", Email = "darick_c@hotmail.com" },
+        });
+
+        //Determine base path for the application.
+        var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+
+        //Set the comments path for the swagger json and ui.
+        var xmlPath = Path.Combine(basePath, "PageantManager.Web.xml");
+        c.IncludeXmlComments(xmlPath);
+      });
+
       services.AddDbContext<PageantManagerContext>(options =>
         options.UseSqlite("Data Source=PageanManager.db", b => b.MigrationsAssembly("PageantManager.Web")));
 
-      services.AddScoped<CostumesBusiness>();
-      services.AddScoped<PageantsBusiness>();
-      services.AddScoped<PerformancesBusiness>();
+      //services.AddScoped<CostumesBusiness>();
+//      services.AddScoped<PageantsBusiness>();
+//      services.AddScoped<PerformancesBusiness>();
 
-      Business.Utilities.Configuration.Configure();
+      Business.Utilities.Configuration.Configure(services);
 
     }
 
@@ -94,6 +116,14 @@ namespace PageantManager.Web
 
       app.UseStaticFiles();
 
+      app.UseSwagger();
+
+      // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
+      app.UseSwaggerUI(c =>
+      {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pageant Manager API V1");
+      });
+
       app.UseMvc(routes =>
       {
         // uncomment for non angular SPA app, comment out code below
@@ -108,6 +138,8 @@ namespace PageantManager.Web
           new {controller = "Home", action = "Index"}
         );
       });
+
+
     }
   }
 }

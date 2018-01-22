@@ -7,9 +7,15 @@ namespace PageantManager.Business.Entities
     {
         [Key]
         public int CostumeId { get; set; }
-		public int PageantId { get; set; }
+        
+        [StringLength(50)]
+        public string Name { get; set; }
+        
         [StringLength(150)]
 		public string Description { get; set; }
-        public List<GarmentType> GarmentTypes { get; set; }
+
+        public string Photo { get; set; }
+        
+        public List<CostumeGarment> CostumeGarments { get; set; }
     }
 }

@@ -18,10 +18,50 @@ namespace PageantManager.Business.Business
 			_ctx = ctx;
 		}
 	    
-	    public async Task<List<CostumeModel>> GetCostumes(int pageantId)
+//	    public async Task<List<CostumeModel>> GetCostumes(int pageantId)
+//	    {
+//		    var costumes = await _ctx.Costumes.Where(c=>c.PageantId == pageantId).OrderBy(g => g.Description).ToListAsync();
+//		    return Mapper.Map<List<CostumeModel>>(costumes);
+//	    }
+
+	    public async Task<List<CostumeModel>> SearchCostumes(List<MeasurementModel> measurements)
 	    {
-		    var costumes = await _ctx.Costumes.Where(c=>c.PageantId == pageantId).OrderBy(g => g.Description).ToListAsync();
+		    var costumes = await _ctx.Costumes.Where(c => 
+		    	c.CostumeGarments.All(cg=> cg.GarmentType.Garments.Any(g => !g.CheckedOut && 
+					g.GarmentMeasurements.All(m=> measurements.Any(m2 => 
+						m.MeasurementTypeId == m2.MeasurementType.MeasurementTypeId &&
+						m.Min <= m2.Value && m2.Value <= m.Max))))).ToListAsync();
+
 		    return Mapper.Map<List<CostumeModel>>(costumes);
+	    }
+	    
+	    public async Task<List<CostumeModel>> GetCostumes()
+	    {
+		    var costumes = await _ctx.Costumes.OrderBy(g => g.Name).ToListAsync();
+		    return Mapper.Map<List<CostumeModel>>(costumes);
+	    }
+
+	    public async Task<CostumeModel> GetCostume(int id, List<MeasurementModel> measurements)
+	    {
+		    var costume = await _ctx.Costumes.Include(c => c.CostumeGarments)
+			    .ThenInclude(cg => cg.GarmentType)
+			    .ThenInclude(ct => ct.Garments)
+			    .ThenInclude(g => g.GarmentMeasurements)
+			    .ThenInclude(gm => gm.MeasurementType)
+			    .SingleOrDefaultAsync(c => c.CostumeId == id);
+
+		    if (costume != null)
+		    {
+			    foreach (var costumeGarment in costume.CostumeGarments)
+			    {
+				    costumeGarment.GarmentType.Garments = costumeGarment.GarmentType.Garments.Where(g =>
+					    !g.CheckedOut && g.GarmentMeasurements.All(m => measurements.Any(m2 =>
+						    m.MeasurementTypeId == m2.MeasurementType.MeasurementTypeId &&
+						    m.Min <= m2.Value && m2.Value <= m.Max))).ToList();
+			    }
+			    return Mapper.Map<CostumeModel>(costume);
+		    }
+		    return null;
 	    }
 	    
 	    public async Task<CostumeModel> UpdateCostume(CostumeModel model)
