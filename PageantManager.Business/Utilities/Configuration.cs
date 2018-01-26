@@ -33,6 +33,7 @@ namespace PageantManager.Business.Utilities
 			services.AddScoped<CostumesBusiness>();
 			services.AddScoped<MeasurementTypesBusiness>();
 			services.AddScoped<GarmentTypesBusiness>();
+			services.AddScoped<GarmentsBusiness>();
 		}
 
     }

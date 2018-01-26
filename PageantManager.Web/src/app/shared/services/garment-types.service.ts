@@ -16,7 +16,7 @@ export class GarmentTypesService {
   }
 
   getGarmentType(id: number, loadGarments: boolean = false): Observable<GarmentType> {
-    return this.http.get<GarmentType>(`${this.url}/${id}?loadGarments=${loadGarments}`);
+    return this.http.get<GarmentType>(`${this.url}/${id}?includeGarments=${loadGarments}`);
   }
 
   createGarmentType(costume: GarmentType): Observable<GarmentType> {

@@ -9,7 +9,7 @@
     <div>{{garmentType.description}}</div>
   </div>
   <div>
-    <app-garment [garmentType]="garmentType"></app-garment>
+    <app-garment [garmentType]="garmentType" (onGarmentCreated)="garmentAdded"></app-garment>
     <div *ngFor="let garment of garmentType.garments">
         <app-garment [garment]="garment"></app-garment>
     </div>

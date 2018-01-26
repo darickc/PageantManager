@@ -33,15 +33,17 @@ namespace PageantManager.Business.Business
 	    public async Task<GarmentModel> UpdateGarment(GarmentModel model)
 	    {
 		    var garment = await GetGarment(model.GarmentId);
-		    if(garment == null)
+		    if (garment == null)
 		    {
-			    garment = new Garment
-			    {
-				    AddedDate = DateTime.UtcNow
-			    };
+			    garment = new Garment();
+			    Mapper.Map(model, garment);
+			    garment.AddedDate = DateTime.UtcNow;
 			    _ctx.Garments.Add(garment);
 		    }
-		    Mapper.Map(model, garment);
+		    else
+		    {
+			    Mapper.Map(model, garment);
+		    }
 
 		    await _ctx.SaveChangesAsync();
 

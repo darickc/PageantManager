@@ -13,6 +13,7 @@ import {
 
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatCardModule} from '@angular/material/card';
 
 import {
   CostumesService,
@@ -34,7 +35,8 @@ import { FilePickerDirective } from './directives/file-picker.directive';
     MatButtonModule,
     MatProgressSpinnerModule,
     MatSlideToggleModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
   ],
   exports: [
     CommonModule,
@@ -47,6 +49,7 @@ import { FilePickerDirective } from './directives/file-picker.directive';
     MatProgressSpinnerModule,
     MatSlideToggleModule,
     MatSnackBarModule,
+    MatCardModule,
     LoadingComponent,
     FilePickerDirective
   ],

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, FormArray, Validators } from '@angular/forms';
 import { Garment, GarmentType, GarmentsService, GarmentMeasurement, PickedFile } from '../../shared';
 
@@ -11,8 +11,10 @@ export class GarmentComponent implements OnInit {
 
   @Input() garment: Garment;
   @Input() garmentType: GarmentType;
+  @Output() onGarmentCreated = new EventEmitter<Garment>();
   form: FormGroup;
   editing: boolean;
+  saving: boolean;
 
   constructor(private garmentsService: GarmentsService, private fb: FormBuilder) { }
 
@@ -78,7 +80,22 @@ export class GarmentComponent implements OnInit {
   }
 
   save() {
-
+    this.saving = true;
+    if (this.garment) {
+      this.garmentsService.updateGarment(this.form.value)
+        .finally(() => this.saving = false )
+        .subscribe(garment => {
+          this.garment = garment;
+          this.resetForm();
+        });
+    } else {
+      this.garmentsService.createGarment(this.form.value)
+        .finally(() => this.saving = false )
+        .subscribe(garment => {
+          this.onGarmentCreated.emit(garment);
+          this.editing = false;
+        });
+    }
   }
 
   edit() {

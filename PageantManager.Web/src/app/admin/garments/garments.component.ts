@@ -5,7 +5,7 @@ import * as _ from 'lodash';
 import { ActivatedRoute, Router } from '@angular/router';
 import {MatSnackBar} from '@angular/material';
 import { GarmentTypesService, MeasurementTypesService } from '../../shared/services';
-import { GarmentType, PickedFile, MeasurementType, MeasurementOption, GarmentMeasurementType } from '../../shared';
+import { GarmentType, PickedFile, MeasurementType, MeasurementOption, GarmentMeasurementType, Garment } from '../../shared';
 
 @Component({
   selector: 'app-garments',
@@ -34,6 +34,10 @@ export class GarmentsComponent implements OnInit {
           .subscribe(garmentType => {
             this.garmentType = garmentType;
           });
+  }
+
+  garmentAdded(garment: Garment) {
+    this.garmentType.garments.push(garment);
   }
 
 }
