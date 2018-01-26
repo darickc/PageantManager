@@ -8,6 +8,8 @@ import { CostumesComponent } from './costumes/costumes.component';
 import { CostumeComponent } from './costume/costume.component';
 import { GarmentTypesComponent } from './garment-types/garment-types.component';
 import { GarmentTypeComponent } from './garment-type/garment-type.component';
+import { GarmentsComponent } from './garments/garments.component';
+import { GarmentComponent } from './garment/garment.component';
 
 const routes: Routes = [
   {
@@ -42,6 +44,11 @@ const routes: Routes = [
         path: 'garment-types/:id',
         component: GarmentTypeComponent,
         data: { title: 'Garment Type' }
+      },
+      {
+        path: 'garment-types/:id/garments',
+        component: GarmentsComponent,
+        data: { title: 'Garments' }
       }
     ]
   }
@@ -58,7 +65,9 @@ const routes: Routes = [
     CostumesComponent,
     CostumeComponent,
     GarmentTypesComponent,
-    GarmentTypeComponent],
+    GarmentTypeComponent,
+    GarmentsComponent,
+    GarmentComponent],
   exports: [RouterModule]
 })
 export class AdminModule { }

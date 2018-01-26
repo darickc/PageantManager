@@ -61,7 +61,7 @@ exports.AppRoutingModule = AppRoutingModule;
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Pageant Manager</h1>\n<router-outlet></router-outlet>\n"
+module.exports = "\n<div class=\"content\">\n<h1>Pageant Manager</h1>\n<router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -73,7 +73,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".content {\n  max-width: 1024px;\n  margin: auto;\n  padding: 20px; }\n", ""]);
 
 // exports
 
@@ -661,8 +661,9 @@ var GarmentTypesService = /** @class */ (function () {
     GarmentTypesService.prototype.getGarmentTypes = function () {
         return this.http.get(this.url);
     };
-    GarmentTypesService.prototype.getGarmentType = function (id) {
-        return this.http.get(this.url + "/" + id);
+    GarmentTypesService.prototype.getGarmentType = function (id, loadGarments) {
+        if (loadGarments === void 0) { loadGarments = false; }
+        return this.http.get(this.url + "/" + id + "?loadGarments=" + loadGarments);
     };
     GarmentTypesService.prototype.createGarmentType = function (costume) {
         return this.http.post("" + this.url, costume);
@@ -681,6 +682,51 @@ exports.GarmentTypesService = GarmentTypesService;
 
 /***/ }),
 
+/***/ "../../../../../src/app/shared/services/garments.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
+var http_1 = __webpack_require__("../../../common/esm5/http.js");
+var GarmentsService = /** @class */ (function () {
+    function GarmentsService(http) {
+        this.http = http;
+        this.url = 'api/garments';
+    }
+    GarmentsService.prototype.getGarments = function () {
+        return this.http.get(this.url);
+    };
+    GarmentsService.prototype.getGarment = function (id) {
+        return this.http.get(this.url + "/" + id);
+    };
+    GarmentsService.prototype.createGarment = function (costume) {
+        return this.http.post("" + this.url, costume);
+    };
+    GarmentsService.prototype.updateGarment = function (costume) {
+        return this.http.put("" + this.url, costume);
+    };
+    GarmentsService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient])
+    ], GarmentsService);
+    return GarmentsService;
+}());
+exports.GarmentsService = GarmentsService;
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/shared/services/index.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -692,6 +738,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__("../../../../../src/app/shared/services/costumes.service.ts"));
 __export(__webpack_require__("../../../../../src/app/shared/services/garment-types.service.ts"));
+__export(__webpack_require__("../../../../../src/app/shared/services/garments.service.ts"));
 __export(__webpack_require__("../../../../../src/app/shared/services/measurement-types.service.ts"));
 
 
@@ -757,6 +804,8 @@ var router_1 = __webpack_require__("../../../router/esm5/router.js");
 var http_1 = __webpack_require__("../../../common/esm5/http.js");
 var forms_1 = __webpack_require__("../../../forms/esm5/forms.js");
 var material_1 = __webpack_require__("../../../material/esm5/material.es5.js");
+var slide_toggle_1 = __webpack_require__("../../../material/esm5/slide-toggle.es5.js");
+var snack_bar_1 = __webpack_require__("../../../material/esm5/snack-bar.es5.js");
 var services_1 = __webpack_require__("../../../../../src/app/shared/services/index.ts");
 var loading_component_1 = __webpack_require__("../../../../../src/app/shared/components/loading/loading.component.ts");
 var file_picker_directive_1 = __webpack_require__("../../../../../src/app/shared/directives/file-picker.directive.ts");
@@ -773,7 +822,9 @@ var SharedModule = /** @class */ (function () {
                 forms_1.ReactiveFormsModule,
                 material_1.MatInputModule,
                 material_1.MatButtonModule,
-                material_1.MatProgressSpinnerModule
+                material_1.MatProgressSpinnerModule,
+                slide_toggle_1.MatSlideToggleModule,
+                snack_bar_1.MatSnackBarModule
             ],
             exports: [
                 common_1.CommonModule,
@@ -784,6 +835,8 @@ var SharedModule = /** @class */ (function () {
                 material_1.MatInputModule,
                 material_1.MatButtonModule,
                 material_1.MatProgressSpinnerModule,
+                slide_toggle_1.MatSlideToggleModule,
+                snack_bar_1.MatSnackBarModule,
                 loading_component_1.LoadingComponent,
                 file_picker_directive_1.FilePickerDirective
             ],
@@ -794,7 +847,8 @@ var SharedModule = /** @class */ (function () {
             providers: [
                 services_1.CostumesService,
                 services_1.GarmentTypesService,
-                services_1.MeasurementTypesService
+                services_1.MeasurementTypesService,
+                services_1.GarmentsService
             ]
         })
     ], SharedModule);

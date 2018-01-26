@@ -7,4 +7,5 @@ export class GarmentMeasurement {
   min: number;
   max: number;
   measurementType: MeasurementType;
+
 }

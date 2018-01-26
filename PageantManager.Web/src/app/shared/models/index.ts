@@ -4,6 +4,7 @@ export * from './garment-measurement-type';
 export * from './garment-measurement';
 export * from './garment-type';
 export * from './garment';
+export * from './measurement-option';
 export * from './measurement-type';
 export * from './measurement';
 export * from './picked-file';

@@ -23,28 +23,68 @@ namespace PageantManager.Business.Business
 		    return Mapper.Map<List<GarmentTypeModel>>(garmentTypes);
 	    }
 
-	    public async Task<GarmentTypeModel> GetGarmentType(int id)
+	    public async Task<GarmentTypeModel> GetGarmentType(int id, bool includeGarments = false)
 	    {
-		    var garmentType = await _ctx.GarmentTypes
+		    var q = _ctx.GarmentTypes
 			    .Include(gt => gt.GarmentMeasurementTypes)
-			    .Include(t=>t.GarmentMeasurementTypes)
-			    .SingleOrDefaultAsync(gt => gt.GarmentTypeId == id);
+			    .ThenInclude(gmt=>gmt.MeasurementType)
+			    .AsQueryable();
+
+		    if (includeGarments)
+		    {
+			    q = q.Include(gt => gt.Garments)
+				    .ThenInclude(g=>g.GarmentMeasurements)
+				    .ThenInclude(g=>g.MeasurementType);
+		    }
+		    
+		    var garmentType = await q.SingleOrDefaultAsync(gt => gt.GarmentTypeId == id);
 		    return Mapper.Map<GarmentTypeModel>(garmentType);
 	    }
 	    
 	    public async Task<GarmentTypeModel> UpdateGarmentType(GarmentTypeModel model)
 	    {
-		    var garmentType = await _ctx.GarmentTypes.FindAsync(model.GarmentTypeId);
+		    
+		    var garmentType = await _ctx.GarmentTypes
+			    .Include(gt => gt.GarmentMeasurementTypes)
+			    .SingleOrDefaultAsync(gt => gt.GarmentTypeId == model.GarmentTypeId);
 		    if(garmentType == null)
 		    {
-			    garmentType = new GarmentType();
+			    garmentType = new GarmentType
+			    {
+				    GarmentMeasurementTypes = new List<GarmentMeasurementType>()
+			    };
 			    _ctx.GarmentTypes.Add(garmentType);
 		    }
-		    Mapper.Map(model, garmentType);
+		    _ctx.Entry(garmentType).CurrentValues.SetValues(model);
+		    //Mapper.Map(model, garmentType);
+
+		    foreach (var measurementTypeModel in model.GarmentMeasurementTypes)
+		    {
+			    if (measurementTypeModel.GarmentMeasurementTypeId == 0)
+			    {
+			    	// garmentType.GarmentMeasurementTypes.Add(Mapper.Map<GarmentMeasurementType>(measurementTypeModel));
+				    garmentType.GarmentMeasurementTypes.Add(new GarmentMeasurementType
+				    {
+					    MeasurementTypeId = measurementTypeModel.MeasurementTypeId
+				    });
+			    }
+			    else
+			    {
+				    var mt = garmentType.GarmentMeasurementTypes.SingleOrDefault(t =>
+					    t.GarmentMeasurementTypeId == measurementTypeModel.GarmentMeasurementTypeId);
+				    if (mt != null)
+				    {
+					    _ctx.Entry(mt).CurrentValues.SetValues(measurementTypeModel);
+				    }
+			    }
+		    }
+		    
+		    var ids = model.GarmentMeasurementTypes.Select(mt => mt.GarmentMeasurementTypeId).ToList();
+		    _ctx.GarmentMeasurementTypes.RemoveRange(garmentType.GarmentMeasurementTypes.Where(mt=>!ids.Contains(mt.GarmentMeasurementTypeId)));
 
 		    await _ctx.SaveChangesAsync();
 
-		    return model;
+		    return Mapper.Map<GarmentTypeModel>(garmentType);
 	    }
 	    
 	    public async Task DeleteGarmentType(int id)

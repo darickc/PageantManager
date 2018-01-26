@@ -1,15 +1,36 @@
 <h2>Garment Type <span *ngIf="newGarmentType">- New</span></h2>
 
 <form [formGroup]="form" novalidate (submit)="submit()">
-  <mat-form-field>
-    <input matInput type="text" placeholder="Name" formControlName="name" maxlength="50" />
-  </mat-form-field>
-  <mat-form-field>
-      <input matInput type="text" placeholder="Description" formControlName="description" maxlength="250" />
+  <div>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Name" formControlName="name" maxlength="50" autofocus />
     </mat-form-field>
-    <img *ngIf="form.controls['photo'].value" [src]="form.controls['photo'].value" alt="">
-    <button mat-button appFilePicker (filePick)='fileSelected($event)' accept=".jpg">Select Photo</button>
-  <button mat-button color="primary" [disabled]='loading'>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Description" formControlName="description" maxlength="250" />
+      </mat-form-field>
+
+  </div>
+  <div>
+    <img *ngIf="form.controls['photo'].value" [src]="form.controls['photo'].value" alt="photo of garment type">
+    <div>
+      <button mat-raised-button color="accent" appFilePicker type="button" (filePick)='fileSelected($event)' accept=".jpg">Select Photo</button>
+      <button mat-raised-button color="accent" type="button" (click)='deletePhoto()'>Delete Photo</button>
+    </div>
+  </div>
+
+    <div>
+      Select the measurements this garment type will use:
+      <div formArrayName="measurementOptions" *ngFor="let m of measurementOptions.controls; let i=index">
+          <div [formGroupName]="i">
+            <mat-slide-toggle formControlName="selected">
+                {{measurementTypes[i].name}}
+          </mat-slide-toggle>
+          </div>
+        </div>
+    </div>
+  <button mat-raised-button color="primary" type="submit" [disabled]='loading'>
     <app-loading *ngIf="loading" size="xsm"></app-loading>
     Save</button>
+    <button mat-raised-button color="accent" type="button" *ngIf="garmentType && garmentType.garmentTypeId" [disabled]='loading'
+    [routerLink]="['/','admin','garment-types',garmentType.garmentTypeId,'garments']">View Garments</button>
 </form>

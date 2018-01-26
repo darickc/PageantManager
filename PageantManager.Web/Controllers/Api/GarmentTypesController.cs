@@ -40,12 +40,13 @@ namespace PageantManager.Web.Controllers.Api
     /// Get Garment Type by Id
     /// </summary>
     /// <param name="id"></param>
+    /// <param name="includeGarments"></param>
     /// <returns></returns>
     [HttpGet("{id}")]
     [ProducesResponseType(typeof(GarmentTypeModel), 200)]
-    public async Task<IActionResult> Get(int id)
+    public async Task<IActionResult> Get(int id, [FromQuery] bool includeGarments = false)
     {
-      var gt = await _garmentTypesBusiness.GetGarmentType(id);
+      var gt = await _garmentTypesBusiness.GetGarmentType(id, includeGarments);
       return Ok(gt);
     }
 

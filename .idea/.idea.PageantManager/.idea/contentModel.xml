@@ -87,6 +87,7 @@
         <e p="Controllers" t="Include">
           <e p="Api" t="Include">
             <e p="CostumesController.cs" t="Include" />
+            <e p="GarmentController.cs" t="Include" />
             <e p="GarmentTypesController.cs" t="Include" />
             <e p="MeasuremntTypesController.cs" t="Include" />
             <e p="PageantsController.cs" t="Include" />
@@ -139,6 +140,11 @@
                 <e p="costumes.component.scss" t="Include" />
                 <e p="costumes.component.ts" t="Include" />
               </e>
+              <e p="garment" t="Include">
+                <e p="garment.component.html" t="Include" />
+                <e p="garment.component.scss" t="Include" />
+                <e p="garment.component.ts" t="Include" />
+              </e>
               <e p="garment-type" t="Include">
                 <e p="garment-type.component.html" t="Include" />
                 <e p="garment-type.component.scss" t="Include" />
@@ -148,6 +154,11 @@
                 <e p="garment-types.component.html" t="Include" />
                 <e p="garment-types.component.scss" t="Include" />
                 <e p="garment-types.component.ts" t="Include" />
+              </e>
+              <e p="garments" t="Include">
+                <e p="garments.component.html" t="Include" />
+                <e p="garments.component.scss" t="Include" />
+                <e p="garments.component.ts" t="Include" />
               </e>
               <e p="pageants" t="Include">
                 <e p="pageants.component.html" t="Include" />
@@ -187,6 +198,7 @@
                 <e p="garment-type.ts" t="Include" />
                 <e p="garment.ts" t="Include" />
                 <e p="index.ts" t="Include" />
+                <e p="measurement-option.ts" t="Include" />
                 <e p="measurement-type.ts" t="Include" />
                 <e p="measurement.ts" t="Include" />
                 <e p="picked-file.ts" t="Include" />
@@ -196,6 +208,7 @@
                 <e p="api.service.ts" t="Include" />
                 <e p="costumes.service.ts" t="Include" />
                 <e p="garment-types.service.ts" t="Include" />
+                <e p="garments.service.ts" t="Include" />
                 <e p="index.ts" t="Include" />
                 <e p="measurement-types.service.ts" t="Include" />
                 <e p="pageants.service.ts" t="Include" />

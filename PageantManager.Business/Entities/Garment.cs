@@ -16,6 +16,5 @@ namespace PageantManager.Business.Entities
 
         public GarmentType GarmentType { get; set; }
         public List<GarmentMeasurement> GarmentMeasurements { get; set; }
-        public List<GarmentMeasurementType> GarmentMeasurementTypes { get; set; }
     }
 }

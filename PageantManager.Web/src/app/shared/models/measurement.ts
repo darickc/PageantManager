@@ -6,5 +6,5 @@ export class Measurement {
 
   public constructor(init?: Partial<Measurement>) {
     Object.assign(this, init);
-}
+  }
 }

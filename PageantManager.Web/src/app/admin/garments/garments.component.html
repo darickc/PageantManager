@@ -1,0 +1,17 @@
+<h2>Garments</h2>
+<app-loading *ngIf='loading'></app-loading>
+<div *ngIf="!loading && garmentType">
+  <div class="garmentType">
+    <div>
+      <img *ngIf="garmentType.photo" [src]="garmentType.photo" alt="Image of Garment Type" />
+    </div>
+    <div>{{garmentType.name}}</div>
+    <div>{{garmentType.description}}</div>
+  </div>
+  <div>
+    <app-garment [garmentType]="garmentType"></app-garment>
+    <div *ngFor="let garment of garmentType.garments">
+        <app-garment [garment]="garment"></app-garment>
+    </div>
+  </div>
+</div>

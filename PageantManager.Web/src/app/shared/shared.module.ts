@@ -11,10 +11,14 @@ import {
   MatProgressSpinnerModule
 } from '@angular/material';
 
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 import {
   CostumesService,
   GarmentTypesService,
-  MeasurementTypesService
+  MeasurementTypesService,
+  GarmentsService
  } from './services';
 import { LoadingComponent } from './components/loading/loading.component';
 import { FilePickerDirective } from './directives/file-picker.directive';
@@ -28,7 +32,9 @@ import { FilePickerDirective } from './directives/file-picker.directive';
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSlideToggleModule,
+    MatSnackBarModule
   ],
   exports: [
     CommonModule,
@@ -39,6 +45,8 @@ import { FilePickerDirective } from './directives/file-picker.directive';
     MatInputModule,
     MatButtonModule,
     MatProgressSpinnerModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
     LoadingComponent,
     FilePickerDirective
   ],
@@ -49,7 +57,8 @@ import { FilePickerDirective } from './directives/file-picker.directive';
   providers: [
     CostumesService,
     GarmentTypesService,
-    MeasurementTypesService
+    MeasurementTypesService,
+    GarmentsService
   ]
 })
 export class SharedModule { }

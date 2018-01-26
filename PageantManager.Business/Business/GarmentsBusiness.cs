@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -17,25 +18,34 @@ namespace PageantManager.Business.Business
 			_ctx = ctx;
 		}
 	    
-	    public async Task<GarmentModel> GetGarments()
+	    public async Task<List<GarmentModel>> GetGarments()
 	    {
 		    var garments = await _ctx.Garments.ToListAsync();
-		    return Mapper.Map<GarmentModel>(garments);
+		    return Mapper.Map<List<GarmentModel>>(garments);
+	    }
+
+	    public async Task<GarmentModel> GetGarmentModel(int id)
+	    {
+		    var garment = await GetGarment(id);
+		    return Mapper.Map<GarmentModel>(garment);
 	    }
 	    
 	    public async Task<GarmentModel> UpdateGarment(GarmentModel model)
 	    {
-		    var garment = await _ctx.Garments.FindAsync(model.GarmentId);
+		    var garment = await GetGarment(model.GarmentId);
 		    if(garment == null)
 		    {
-			    garment = new Garment();
+			    garment = new Garment
+			    {
+				    AddedDate = DateTime.UtcNow
+			    };
 			    _ctx.Garments.Add(garment);
 		    }
 		    Mapper.Map(model, garment);
 
 		    await _ctx.SaveChangesAsync();
 
-		    return model;
+		    return await GetGarmentModel(garment.GarmentId);
 	    }
 	    
 	    public async Task DeleteGarment(int id)
@@ -43,6 +53,15 @@ namespace PageantManager.Business.Business
 		    var garment = await _ctx.Garments.FindAsync(id);
 		    _ctx.Garments.Remove(garment);
 		    await _ctx.SaveChangesAsync();
+	    }
+
+	    private async Task<Garment> GetGarment(int id)
+	    {
+		    var garment = await _ctx.Garments
+			    .Include(g => g.GarmentMeasurements)
+			    .ThenInclude(gm => gm.MeasurementType)
+			    .SingleOrDefaultAsync(g => g.GarmentId == id);
+		    return garment;
 	    }
     }
 }

@@ -4,5 +4,9 @@ export class GarmentMeasurementType {
   garmentMeasurementTypeId: number;
   garmentTypeId: number;
   measurementTypeId: number;
-  measurementType: MeasurementType[];
+  measurementType: MeasurementType;
+
+  public constructor(init?: Partial<GarmentMeasurementType>) {
+    Object.assign(this, init);
+  }
 }
