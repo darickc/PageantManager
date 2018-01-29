@@ -1,43 +1,47 @@
-<mat-card>
-    <mat-card-content>
-        <div *ngIf="!editing && garment">
-            <div>
-              <img *ngIf="garment.photo" [src]="garment.photo" alt="Photo of garment">
+<mat-card *ngIf="editing || garment">
+    <img mat-card-image *ngIf="garment && garment.photo && !editing" [src]="garment.photo" alt="Photo of garment">
+  <mat-card-content>
+    <div *ngIf="!editing && garment">
+      <div *ngFor="let measurement of garment.garmentMeasurements">
+        {{measurement.measurementType.name}} Min: {{measurement.min}} Max: {{measurement.max}}
+      </div>
+    </div>
+    <div *ngIf="editing">
+      <form [formGroup]="form" (submit)="save()">
+        <div *ngIf="form.controls.garmentId.value">
+          ID: {{form.controls.garmentId.value}}
+        </div>
+        <div>
+          <img *ngIf="form.controls['photo'].value" [src]="form.controls['photo'].value" alt="Photo of garment">
+          <div>
+            <button mat-raised-button color="accent" appFilePicker type="button" (filePick)='fileSelected($event)' accept=".jpg">Select Photo</button>
+            <button mat-raised-button color="accent" type="button" (click)='deletePhoto()'>Delete Photo</button>
+          </div>
+        </div>
+        <div class="measurements">
+          <div formArrayName='garmentMeasurements' *ngFor="let gm of form.controls.garmentMeasurements.controls; let i=index">
+            <div [formGroupName]="i">
+              {{gm.controls.measurementType.controls.name.value}}:
+              <mat-form-field>
+                <input matInput type="number" formControlName="min" placeholder="Min" />
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput type="number" formControlName="max" placeholder="Max" />
+              </mat-form-field>
             </div>
-            <div *ngFor="let measurement of garment.garmentMeasurements">
-              {{measurement.measurementType.name}} Min: {{measurement.min}} Max: {{measurement.max}}
-            </div>
-            <button mat-raised-button color="primary" (click)="edit()">Edit</button>
           </div>
-          <div *ngIf="!editing && garmentType">
-            <button mat-raised-button color="primary" (click)="edit()">Add Garment</button>
-          </div>
-          <div *ngIf="editing">
-            <form [formGroup]="form" (submit)="save()">
-              <div *ngIf="form.controls.garmentId.value">
-                ID: {{form.controls.garmentId.value}}
-              </div>
-              <div>
-                <img *ngIf="form.controls['photo'].value" [src]="form.controls['photo'].value" alt="Photo of garment">
-                <div>
-                  <button mat-raised-button color="accent" appFilePicker type="button" (filePick)='fileSelected($event)' accept=".jpg">Select Photo</button>
-                  <button mat-raised-button color="accent" type="button" (click)='deletePhoto()'>Delete Photo</button>
-                </div>
-              </div>
-              <div formArrayName='garmentMeasurements' *ngFor="let gm of form.controls.garmentMeasurements.controls; let i=index">
-                <div [formGroupName]="i">
-                  {{gm.controls.measurementType.controls.name.value}}:
-                  <mat-form-field>
-                    <input matInput type="number" formControlName="min" placeholder="Min" />
-                  </mat-form-field>
-                  <mat-form-field>
-                    <input matInput type="number" formControlName="max" placeholder="Max" />
-                  </mat-form-field>
-                </div>
-              </div>
-              <button mat-raised-button color="primary" type="submit">Save</button>
-              <button mat-raised-button color="accent" type="button" (click)="cancel()">Cancel</button>
-            </form>
-          </div>
-    </mat-card-content>
-</mat-card>
+        </div>
+
+      </form>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+      <button *ngIf="!editing && garment" mat-button color="primary" (click)="edit()">Edit</button>
+      <div *ngIf="editing">
+        <button mat-button color="primary" type="submit" [disabled]="saving">Save</button>
+        <button mat-button color="accent" type="button" (click)="cancel()" [disabled]="saving">Cancel</button>
+        <mat-progress-bar *ngIf="saving" mode="indeterminate"></mat-progress-bar>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+  <button *ngIf="!editing && garmentType" mat-raised-button color="primary" (click)="edit()">Add Garment</button>

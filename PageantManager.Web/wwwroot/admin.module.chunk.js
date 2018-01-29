@@ -588,7 +588,7 @@ exports.GarmentTypesComponent = GarmentTypesComponent;
 /***/ "../../../../../src/app/admin/garment/garment.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card>\n    <mat-card-content>\n        <div *ngIf=\"!editing && garment\">\n            <div>\n              <img *ngIf=\"garment.photo\" [src]=\"garment.photo\" alt=\"Photo of garment\">\n            </div>\n            <div *ngFor=\"let measurement of garment.garmentMeasurements\">\n              {{measurement.measurementType.name}} Min: {{measurement.min}} Max: {{measurement.max}}\n            </div>\n            <button mat-raised-button color=\"primary\" (click)=\"edit()\">Edit</button>\n          </div>\n          <div *ngIf=\"!editing && garmentType\">\n            <button mat-raised-button color=\"primary\" (click)=\"edit()\">Add Garment</button>\n          </div>\n          <div *ngIf=\"editing\">\n            <form [formGroup]=\"form\" (submit)=\"save()\">\n              <div *ngIf=\"form.controls.garmentId.value\">\n                ID: {{form.controls.garmentId.value}}\n              </div>\n              <div>\n                <img *ngIf=\"form.controls['photo'].value\" [src]=\"form.controls['photo'].value\" alt=\"Photo of garment\">\n                <div>\n                  <button mat-raised-button color=\"accent\" appFilePicker type=\"button\" (filePick)='fileSelected($event)' accept=\".jpg\">Select Photo</button>\n                  <button mat-raised-button color=\"accent\" type=\"button\" (click)='deletePhoto()'>Delete Photo</button>\n                </div>\n              </div>\n              <div formArrayName='garmentMeasurements' *ngFor=\"let gm of form.controls.garmentMeasurements.controls; let i=index\">\n                <div [formGroupName]=\"i\">\n                  {{gm.controls.measurementType.controls.name.value}}:\n                  <mat-form-field>\n                    <input matInput type=\"number\" formControlName=\"min\" placeholder=\"Min\" />\n                  </mat-form-field>\n                  <mat-form-field>\n                    <input matInput type=\"number\" formControlName=\"max\" placeholder=\"Max\" />\n                  </mat-form-field>\n                </div>\n              </div>\n              <button mat-raised-button color=\"primary\" type=\"submit\">Save</button>\n              <button mat-raised-button color=\"accent\" type=\"button\" (click)=\"cancel()\">Cancel</button>\n            </form>\n          </div>\n    </mat-card-content>\n</mat-card>\n"
+module.exports = "<mat-card *ngIf=\"editing || garment\">\n    <img mat-card-image *ngIf=\"garment && garment.photo && !editing\" [src]=\"garment.photo\" alt=\"Photo of garment\">\n  <mat-card-content>\n    <div *ngIf=\"!editing && garment\">\n      <div *ngFor=\"let measurement of garment.garmentMeasurements\">\n        {{measurement.measurementType.name}} Min: {{measurement.min}} Max: {{measurement.max}}\n      </div>\n    </div>\n    <div *ngIf=\"editing\">\n      <form [formGroup]=\"form\" (submit)=\"save()\">\n        <div *ngIf=\"form.controls.garmentId.value\">\n          ID: {{form.controls.garmentId.value}}\n        </div>\n        <div>\n          <img *ngIf=\"form.controls['photo'].value\" [src]=\"form.controls['photo'].value\" alt=\"Photo of garment\">\n          <div>\n            <button mat-raised-button color=\"accent\" appFilePicker type=\"button\" (filePick)='fileSelected($event)' accept=\".jpg\">Select Photo</button>\n            <button mat-raised-button color=\"accent\" type=\"button\" (click)='deletePhoto()'>Delete Photo</button>\n          </div>\n        </div>\n        <div class=\"measurements\">\n          <div formArrayName='garmentMeasurements' *ngFor=\"let gm of form.controls.garmentMeasurements.controls; let i=index\">\n            <div [formGroupName]=\"i\">\n              {{gm.controls.measurementType.controls.name.value}}:\n              <mat-form-field>\n                <input matInput type=\"number\" formControlName=\"min\" placeholder=\"Min\" />\n              </mat-form-field>\n              <mat-form-field>\n                <input matInput type=\"number\" formControlName=\"max\" placeholder=\"Max\" />\n              </mat-form-field>\n            </div>\n          </div>\n        </div>\n\n      </form>\n    </div>\n  </mat-card-content>\n  <mat-card-actions>\n      <button *ngIf=\"!editing && garment\" mat-button color=\"primary\" (click)=\"edit()\">Edit</button>\n      <div *ngIf=\"editing\">\n        <button mat-button color=\"primary\" type=\"submit\" [disabled]=\"saving\">Save</button>\n        <button mat-button color=\"accent\" type=\"button\" (click)=\"cancel()\" [disabled]=\"saving\">Cancel</button>\n        <mat-progress-bar *ngIf=\"saving\" mode=\"indeterminate\"></mat-progress-bar>\n      </div>\n    </mat-card-actions>\n  </mat-card>\n  <button *ngIf=\"!editing && garmentType\" mat-raised-button color=\"primary\" (click)=\"edit()\">Add Garment</button>\n"
 
 /***/ }),
 
@@ -600,7 +600,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "mat-card {\n  margin-top: 10px; }\n", ""]);
+exports.push([module.i, "mat-card {\n  margin-top: 10px;\n  max-width: 300px; }\n\nmat-progress-bar {\n  margin-top: 5px; }\n\n.measurements {\n  margin-top: 20px; }\n\nmat-form-field {\n  width: 50px; }\n", ""]);
 
 // exports
 
@@ -677,6 +677,7 @@ var GarmentComponent = /** @class */ (function () {
             }
         }
         else {
+            this.form.patchValue(this.garment);
             for (var _b = 0, _c = this.garment.garmentMeasurements; _b < _c.length; _b++) {
                 var gm = _c[_b];
                 var gmForm = this.getGarmentMeasurementForm();
@@ -693,13 +694,16 @@ var GarmentComponent = /** @class */ (function () {
     };
     GarmentComponent.prototype.save = function () {
         var _this = this;
+        if (this.form.invalid) {
+            return;
+        }
         this.saving = true;
         if (this.garment) {
             this.garmentsService.updateGarment(this.form.value)
                 .finally(function () { return _this.saving = false; })
                 .subscribe(function (garment) {
                 _this.garment = garment;
-                _this.resetForm();
+                _this.editing = false;
             });
         }
         else {
@@ -748,7 +752,7 @@ exports.GarmentComponent = GarmentComponent;
 /***/ "../../../../../src/app/admin/garments/garments.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Garments</h2>\n<app-loading *ngIf='loading'></app-loading>\n<div *ngIf=\"!loading && garmentType\">\n  <div class=\"garmentType\">\n    <div>\n      <img *ngIf=\"garmentType.photo\" [src]=\"garmentType.photo\" alt=\"Image of Garment Type\" />\n    </div>\n    <div>{{garmentType.name}}</div>\n    <div>{{garmentType.description}}</div>\n  </div>\n  <div>\n    <app-garment [garmentType]=\"garmentType\" (onGarmentCreated)=\"garmentAdded\"></app-garment>\n    <div *ngFor=\"let garment of garmentType.garments\">\n        <app-garment [garment]=\"garment\"></app-garment>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<h2>Garments</h2>\n<app-loading *ngIf='loading'></app-loading>\n<div *ngIf=\"!loading && garmentType\">\n  <div class=\"garmentType\">\n    <div>\n      <img *ngIf=\"garmentType.photo\" [src]=\"garmentType.photo\" alt=\"Image of Garment Type\" />\n    </div>\n    <div>{{garmentType.name}}</div>\n    <div>{{garmentType.description}}</div>\n  </div>\n  <div>\n    <app-garment [garmentType]=\"garmentType\" (onGarmentCreated)=\"garmentAdded($event)\"></app-garment>\n    <div *ngFor=\"let garment of garmentType.garments\">\n        <app-garment [garment]=\"garment\"></app-garment>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 

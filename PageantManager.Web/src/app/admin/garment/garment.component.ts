@@ -63,6 +63,7 @@ export class GarmentComponent implements OnInit {
         formArray.push(gmForm);
        }
     } else {
+      this.form.patchValue(this.garment);
       for (const gm of this.garment.garmentMeasurements) {
         const gmForm = this.getGarmentMeasurementForm();
         gmForm.patchValue(gm);
@@ -80,13 +81,17 @@ export class GarmentComponent implements OnInit {
   }
 
   save() {
+    if (this.form.invalid) {
+      return;
+    }
+
     this.saving = true;
     if (this.garment) {
       this.garmentsService.updateGarment(this.form.value)
         .finally(() => this.saving = false )
         .subscribe(garment => {
           this.garment = garment;
-          this.resetForm();
+          this.editing = false;
         });
     } else {
       this.garmentsService.createGarment(this.form.value)

@@ -35,14 +35,31 @@ namespace PageantManager.Business.Business
 		    var garment = await GetGarment(model.GarmentId);
 		    if (garment == null)
 		    {
-			    garment = new Garment();
-			    Mapper.Map(model, garment);
-			    garment.AddedDate = DateTime.UtcNow;
+			    garment = new Garment
+			    {
+				    GarmentMeasurements = new List<GarmentMeasurement>()
+			    };
+			    model.AddedDate = DateTime.UtcNow;
 			    _ctx.Garments.Add(garment);
 		    }
-		    else
+		    _ctx.Entry(garment).CurrentValues.SetValues(model);
+		    
+		    foreach (var garmentMeasurement in model.GarmentMeasurements)
 		    {
-			    Mapper.Map(model, garment);
+			    garmentMeasurement.MeasurementType = null;
+			    if (garmentMeasurement.GarmentMeasurementId == 0)
+			    {
+				    garment.GarmentMeasurements.Add(Mapper.Map<GarmentMeasurement>(garmentMeasurement));
+			    }
+			    else
+			    {
+				    var mt = garment.GarmentMeasurements.SingleOrDefault(t =>
+					    t.GarmentMeasurementId == garmentMeasurement.GarmentMeasurementId);
+				    if (mt != null)
+				    {
+					    _ctx.Entry(mt).CurrentValues.SetValues(garmentMeasurement);
+				    }
+			    }
 		    }
 
 		    await _ctx.SaveChangesAsync();

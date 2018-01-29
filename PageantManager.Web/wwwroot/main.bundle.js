@@ -807,6 +807,7 @@ var material_1 = __webpack_require__("../../../material/esm5/material.es5.js");
 var slide_toggle_1 = __webpack_require__("../../../material/esm5/slide-toggle.es5.js");
 var snack_bar_1 = __webpack_require__("../../../material/esm5/snack-bar.es5.js");
 var card_1 = __webpack_require__("../../../material/esm5/card.es5.js");
+var progress_bar_1 = __webpack_require__("../../../material/esm5/progress-bar.es5.js");
 var services_1 = __webpack_require__("../../../../../src/app/shared/services/index.ts");
 var loading_component_1 = __webpack_require__("../../../../../src/app/shared/components/loading/loading.component.ts");
 var file_picker_directive_1 = __webpack_require__("../../../../../src/app/shared/directives/file-picker.directive.ts");
@@ -826,7 +827,8 @@ var SharedModule = /** @class */ (function () {
                 material_1.MatProgressSpinnerModule,
                 slide_toggle_1.MatSlideToggleModule,
                 snack_bar_1.MatSnackBarModule,
-                card_1.MatCardModule
+                card_1.MatCardModule,
+                progress_bar_1.MatProgressBarModule
             ],
             exports: [
                 common_1.CommonModule,
@@ -840,6 +842,7 @@ var SharedModule = /** @class */ (function () {
                 slide_toggle_1.MatSlideToggleModule,
                 snack_bar_1.MatSnackBarModule,
                 card_1.MatCardModule,
+                progress_bar_1.MatProgressBarModule,
                 loading_component_1.LoadingComponent,
                 file_picker_directive_1.FilePickerDirective
             ],
