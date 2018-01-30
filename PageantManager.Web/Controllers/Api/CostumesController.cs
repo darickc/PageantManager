@@ -42,15 +42,14 @@ namespace PageantManager.Web.Controllers.Api
     /// <param name="id"></param>
     /// <returns></returns>
     [HttpGet("{id:int}")]
-    [ProducesResponseType(typeof(CostumeModel), 200)]
-    public async Task<IActionResult> Get(int id)
+    [ProducesResponseType(typeof(CostumeModel), 200)]public async Task<IActionResult> Get(int id)
     {
       var costume = await _costumesBusiness.GetCostume(id);
       return Ok(costume);
     }
 
     /// <summary>
-    /// Update/Create Costume
+    /// Search form Costumes that fit the measurements
     /// </summary>
     /// <param name="measurements"></param>
     /// <returns></returns>
@@ -59,6 +58,20 @@ namespace PageantManager.Web.Controllers.Api
     public async Task<IActionResult> PostSearch([FromBody] List<MeasurementModel> measurements)
     {
       var costumes = await _costumesBusiness.SearchCostumes(measurements);
+      return Ok(costumes);
+    }
+
+    /// <summary>
+    /// Get costume and garments that fit the measurements
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="measurements"></param>
+    /// <returns></returns>
+    [HttpPost("search/{id:int}")]
+    [ProducesResponseType(typeof(List<CostumeModel>), 200)]
+    public async Task<IActionResult> PostSearch(int id, [FromBody] List<MeasurementModel> measurements)
+    {
+      var costumes = await _costumesBusiness.GetCostume(id, measurements);
       return Ok(costumes);
     }
 

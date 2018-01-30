@@ -27,10 +27,14 @@ namespace PageantManager.Business.Business
 	    public async Task<List<CostumeModel>> SearchCostumes(List<MeasurementModel> measurements)
 	    {
 		    var costumes = await _ctx.Costumes.Where(c => 
-		    	c.CostumeGarments.All(cg=> cg.GarmentType.Garments.Any(g => !g.CheckedOut && 
-					g.GarmentMeasurements.All(m=> measurements.Any(m2 => 
+		    	c.CostumeGarments.All(cg=> cg.GarmentType.Garments.Any(g => 
+				    !g.CheckedOut && 
+				    !g.RetiredDate.HasValue &&
+					g.GarmentMeasurements.All(m=> 
+						measurements.Any(m2 => 
 						m.MeasurementTypeId == m2.MeasurementType.MeasurementTypeId &&
-						m.Min <= m2.Value && m2.Value <= m.Max))))).ToListAsync();
+						m.Min <= m2.Value && 
+						m2.Value <= m.Max))))).ToListAsync();
 
 		    return Mapper.Map<List<CostumeModel>>(costumes);
 	    }
@@ -61,9 +65,12 @@ namespace PageantManager.Business.Business
 			    foreach (var costumeGarment in costume.CostumeGarments)
 			    {
 				    costumeGarment.GarmentType.Garments = costumeGarment.GarmentType.Garments.Where(g =>
-					    !g.CheckedOut && g.GarmentMeasurements.All(m => measurements.Any(m2 =>
+					    !g.CheckedOut && 
+					    !g.RetiredDate.HasValue && 
+					    g.GarmentMeasurements.All(m => measurements.Any(m2 =>
 						    m.MeasurementTypeId == m2.MeasurementType.MeasurementTypeId &&
-						    m.Min <= m2.Value && m2.Value <= m.Max))).ToList();
+						    m.Min <= m2.Value && 
+						    m2.Value <= m.Max))).ToList();
 			    }
 			    return Mapper.Map<CostumeModel>(costume);
 		    }

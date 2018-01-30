@@ -121,6 +121,8 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="protractor.conf.js" t="Include" />
+        <e p="proxy.config.js" t="Include" />
+        <e p="proxy.config.json" t="Include" />
         <e p="README.md" t="Include" />
         <e p="src" t="Include">
           <e p="app" t="Include">
@@ -220,10 +222,12 @@
             <e p=".gitkeep" t="Include" />
           </e>
           <e p="environments" t="Include">
+            <e p="environment.hmr.ts" t="Include" />
             <e p="environment.prod.ts" t="Include" />
             <e p="environment.ts" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+          <e p="hmr.ts" t="Include" />
           <e p="index.html" t="Include" />
           <e p="main.ts" t="Include" />
           <e p="polyfills.ts" t="Include" />
@@ -246,22 +250,7 @@
             <e p="_Layout.cshtml" t="Include" />
           </e>
         </e>
-        <e p="wwwroot" t="Include">
-          <e p="admin.module.chunk.js" t="Include" />
-          <e p="admin.module.chunk.js.map" t="Include" />
-          <e p="favicon.ico" t="Include" />
-          <e p="index.html" t="Include" />
-          <e p="inline.bundle.js" t="Include" />
-          <e p="inline.bundle.js.map" t="Include" />
-          <e p="main.bundle.js" t="Include" />
-          <e p="main.bundle.js.map" t="Include" />
-          <e p="polyfills.bundle.js" t="Include" />
-          <e p="polyfills.bundle.js.map" t="Include" />
-          <e p="styles.bundle.js" t="Include" />
-          <e p="styles.bundle.js.map" t="Include" />
-          <e p="vendor.bundle.js" t="Include" />
-          <e p="vendor.bundle.js.map" t="Include" />
-        </e>
+        <e p="wwwroot" t="Include" />
       </e>
     </e>
   </component>

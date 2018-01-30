@@ -8,18 +8,18 @@
     </div>
     <div *ngIf="editing">
       <form [formGroup]="form" (submit)="save()">
-        <div *ngIf="form.controls.garmentId.value">
-          ID: {{form.controls.garmentId.value}}
+        <div *ngIf="form.controls['garmentId'].value">
+          ID: {{form.controls['garmentId'].value}}
         </div>
         <div>
           <img *ngIf="form.controls['photo'].value" [src]="form.controls['photo'].value" alt="Photo of garment">
           <div>
             <button mat-raised-button color="accent" appFilePicker type="button" (filePick)='fileSelected($event)' accept=".jpg">Select Photo</button>
-            <button mat-raised-button color="accent" type="button" (click)='deletePhoto()'>Delete Photo</button>
+            <button mat-raised-button color="accent" *ngIf="form.controls['photo'].value" type="button" (click)='deletePhoto()'>Delete Photo</button>
           </div>
         </div>
         <div class="measurements">
-          <div formArrayName='garmentMeasurements' *ngFor="let gm of form.controls.garmentMeasurements.controls; let i=index">
+          <div formArrayName='garmentMeasurements' *ngFor="let gm of form.controls['garmentMeasurements'].controls; let i=index">
             <div [formGroupName]="i">
               {{gm.controls.measurementType.controls.name.value}}:
               <mat-form-field>

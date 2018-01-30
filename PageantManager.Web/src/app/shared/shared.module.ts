@@ -8,13 +8,17 @@ import {
   MatButtonModule,
   MatCheckboxModule,
   MatInputModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatMenuModule,
+  MatProgressBarModule,
+  MatCardModule,
+  MatSnackBarModule,
+  MatSlideToggleModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatListModule,
+  MatIconModule
 } from '@angular/material';
-
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatCardModule} from '@angular/material/card';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import {
   CostumesService,
@@ -38,7 +42,12 @@ import { FilePickerDirective } from './directives/file-picker.directive';
     MatSlideToggleModule,
     MatSnackBarModule,
     MatCardModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule
   ],
   exports: [
     CommonModule,
@@ -54,7 +63,12 @@ import { FilePickerDirective } from './directives/file-picker.directive';
     MatCardModule,
     MatProgressBarModule,
     LoadingComponent,
-    FilePickerDirective
+    FilePickerDirective,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule
   ],
   declarations: [
     LoadingComponent,
