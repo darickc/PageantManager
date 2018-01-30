@@ -24,16 +24,35 @@ namespace PageantManager.Web.Controllers.Api
       _garmentTypesBusiness = garmentTypesBusiness;
     }
 
+//    /// <summary>
+//    /// Get Garment Types
+//    /// </summary>
+//    /// <returns></returns>
+//    [HttpGet]
+//    [ProducesResponseType(typeof(List<GarmentTypeModel>), 200)]
+//    public async Task<IActionResult> Get()
+//    {
+//      var gt = await _garmentTypesBusiness.GetGarmentTypes();
+//      return Ok(gt);
+//    }
+
     /// <summary>
-    /// Get Garment Types
+    /// Search for garment types
     /// </summary>
+    /// <param name="search"></param>
+    /// <param name="page"></param>
+    /// <param name="pageCount"></param>
     /// <returns></returns>
     [HttpGet]
-    [ProducesResponseType(typeof(List<GarmentTypeModel>), 200)]
-    public async Task<IActionResult> Get()
+    [ProducesResponseType(typeof(ItemsModel<GarmentTypeModel>), 200)]
+    public async Task<IActionResult> Get([FromQuery] string search = null, [FromQuery] int? page = 1, [FromQuery] int? pageCount = 25)
     {
-      var gt = await _garmentTypesBusiness.GetGarmentTypes();
-      return Ok(gt);
+      if (!page.HasValue)
+        page = 1;
+      if (!pageCount.HasValue)
+        pageCount = 25;
+      var garmentTypes = await _garmentTypesBusiness.GetGarmentTypes(search, page.Value, pageCount.Value);
+      return Ok(garmentTypes);
     }
 
     /// <summary>

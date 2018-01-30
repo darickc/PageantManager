@@ -27,6 +27,7 @@ namespace PageantManager.Business.Business
 	    public async Task<List<CostumeModel>> SearchCostumes(List<MeasurementModel> measurements)
 	    {
 		    var costumes = await _ctx.Costumes.Where(c => 
+			    c.CostumeGarments.Count > 0 &&
 		    	c.CostumeGarments.All(cg=> cg.GarmentType.Garments.Any(g => 
 				    !g.CheckedOut && 
 				    !g.RetiredDate.HasValue &&
@@ -39,10 +40,37 @@ namespace PageantManager.Business.Business
 		    return Mapper.Map<List<CostumeModel>>(costumes);
 	    }
 	    
-	    public async Task<List<CostumeModel>> GetCostumes()
+	    public async Task<ItemsModel<CostumeModel>> GetCostumes(string search, int page, int pageCount)
 	    {
-		    var costumes = await _ctx.Costumes.OrderBy(g => g.Name).ToListAsync();
-		    return Mapper.Map<List<CostumeModel>>(costumes);
+		    var q = GetCostumesQuery(search);
+		    var model = new ItemsModel<CostumeModel>
+		    {
+			    Count = await q.CountAsync(),
+			    Page = page,
+			    PageCount = pageCount
+		    };
+		    
+		    if ((page - 1) * pageCount >= model.Count)
+		    {
+			    model.Page = model.Count / pageCount;
+			    if (model.Count % pageCount > 0)
+				    model.Page++;
+		    }
+
+		    var costumes = await q
+			    .Skip((model.Page - 1) * pageCount)
+			    .Take(pageCount)
+			    .ToListAsync();
+		    model.Items = Mapper.Map<List<CostumeModel>>(costumes);
+		    return model;
+	    }
+
+	    private IOrderedQueryable<Costume> GetCostumesQuery(string search)
+	    {
+		    var q = _ctx.Costumes
+			    .Where(c=> string.IsNullOrEmpty(search) || c.Name.IndexOf(search, StringComparison.CurrentCultureIgnoreCase) > -1)
+			    .OrderBy(g => g.Name);
+		    return q;
 	    }
 	    
 	    public async Task<CostumeModel> GetCostume(int id)

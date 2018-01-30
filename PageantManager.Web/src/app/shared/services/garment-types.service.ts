@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { HttpClient } from '@angular/common/http';
 
-import { GarmentType } from '../models';
+import { GarmentType, ItemsModel } from '../models';
 
 @Injectable()
 export class GarmentTypesService {
@@ -11,9 +11,20 @@ export class GarmentTypesService {
 
   constructor(private http: HttpClient) { }
 
-    getGarmentTypes(): Observable<GarmentType[]> {
-    return this.http.get<GarmentType[]>(this.url);
-  }
+  //   getGarmentTypes(): Observable<GarmentType[]> {
+  //   return this.http.get<GarmentType[]>(this.url);
+  // }
+
+  getGarmentTypes(search: string, page: number, pageCount: number): Observable<ItemsModel<GarmentType>> {
+    const params = <any>{
+      page: page,
+      pageCount: pageCount
+    };
+    if (search) {
+      params.search = search;
+    }
+  return this.http.get<ItemsModel<GarmentType>>(this.url, {params});
+}
 
   getGarmentType(id: number, loadGarments: boolean = false): Observable<GarmentType> {
     return this.http.get<GarmentType>(`${this.url}/${id}?includeGarments=${loadGarments}`);

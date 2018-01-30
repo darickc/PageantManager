@@ -16,7 +16,7 @@ namespace PageantManager.Business.Test.Tests
         [Fact]
         public async Task CheckCellPhoneAuthorizationAsyncTest()
         {
-            var costumes = await _costumesBusiness.GetCostumes();
+            var costumes = await _costumesBusiness.GetCostumes(null, 1, 25);
             Assert.NotNull(costumes);
         }
     }

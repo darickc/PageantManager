@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
-import { Costume, Measurement } from '../models';
+import { Costume, ItemsModel, Measurement } from '../models';
 
 @Injectable()
 export class CostumesService {
@@ -11,8 +11,15 @@ export class CostumesService {
 
   constructor(private http: HttpClient) { }
 
-    getCostumes(): Observable<Costume[]> {
-    return this.http.get<Costume[]>(this.url);
+    getCostumes(search: string, page: number, pageCount: number): Observable<ItemsModel<Costume>> {
+      const params = <any>{
+        page: page,
+        pageCount: pageCount
+      };
+      if (search) {
+        params.search = search;
+      }
+    return this.http.get<ItemsModel<Costume>>(this.url, {params});
   }
 
   getCostume(id: number): Observable<Costume> {

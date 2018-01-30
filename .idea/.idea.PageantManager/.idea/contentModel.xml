@@ -38,6 +38,7 @@
         <e p="Models" t="Include">
           <e p="CostumeGarmentModel.cs" t="Include" />
           <e p="CostumeModel.cs" t="Include" />
+          <e p="CostumesModel.cs" t="Include" />
           <e p="GarmentMeasurementModel.cs" t="Include" />
           <e p="GarmentMeasurementTypeModel.cs" t="Include" />
           <e p="GarmentModel.cs" t="Include" />
@@ -200,6 +201,7 @@
                 <e p="garment-type.ts" t="Include" />
                 <e p="garment.ts" t="Include" />
                 <e p="index.ts" t="Include" />
+                <e p="itemsModel.ts" t="Include" />
                 <e p="measurement-option.ts" t="Include" />
                 <e p="measurement-type.ts" t="Include" />
                 <e p="measurement.ts" t="Include" />

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -21,6 +22,39 @@ namespace PageantManager.Business.Business
 	    {
 		    var garmentTypes = await _ctx.GarmentTypes.OrderBy(g => g.Name).ToListAsync();
 		    return Mapper.Map<List<GarmentTypeModel>>(garmentTypes);
+	    }
+	    
+	    public async Task<ItemsModel<GarmentTypeModel>> GetGarmentTypes(string search, int page, int pageCount)
+	    {
+		    var q = GetGarmentTypesQuery(search);
+		    var model = new ItemsModel<GarmentTypeModel>
+		    {
+			    Count = await q.CountAsync(),
+			    Page = page,
+			    PageCount = pageCount
+		    };
+		    
+		    if ((page - 1) * pageCount >= model.Count)
+		    {
+			    model.Page = model.Count / pageCount;
+			    if (model.Count % pageCount > 0)
+				    model.Page++;
+		    }
+
+		    var garmentTypes = await q
+			    .Skip((model.Page - 1) * pageCount)
+			    .Take(pageCount)
+			    .ToListAsync();
+		    model.Items = Mapper.Map<List<GarmentTypeModel>>(garmentTypes);
+		    return model;
+	    }
+
+	    private IOrderedQueryable<GarmentType> GetGarmentTypesQuery(string search)
+	    {
+		    var q = _ctx.GarmentTypes
+			    .Where(c=> string.IsNullOrEmpty(search) || c.Name.IndexOf(search, StringComparison.CurrentCultureIgnoreCase) > -1)
+			    .OrderBy(g => g.Name);
+		    return q;
 	    }
 
 	    public async Task<GarmentTypeModel> GetGarmentType(int id, bool includeGarments = false)

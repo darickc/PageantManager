@@ -1,3 +1,14 @@
-img{
-  max-height: 200px;
+.costumes{
+  display: flex;
+  flex-wrap: wrap;
+}
+.photo{
+  width:200px;
+  height: 200px;
+  background-size: 100%;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+.search{
+  margin-top: 10px;
 }

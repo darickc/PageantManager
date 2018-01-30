@@ -17,7 +17,8 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatListModule,
-  MatIconModule
+  MatIconModule,
+  MatPaginatorModule
 } from '@angular/material';
 
 import {
@@ -47,7 +48,8 @@ import { FilePickerDirective } from './directives/file-picker.directive';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule
   ],
   exports: [
     CommonModule,
@@ -68,7 +70,8 @@ import { FilePickerDirective } from './directives/file-picker.directive';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule
   ],
   declarations: [
     LoadingComponent,

@@ -29,10 +29,14 @@ namespace PageantManager.Web.Controllers.Api
     /// </summary>
     /// <returns></returns>
     [HttpGet]
-    [ProducesResponseType(typeof(List<CostumeModel>), 200)]
-    public async Task<IActionResult> Get()
+    [ProducesResponseType(typeof(ItemsModel<CostumeModel>), 200)]
+    public async Task<IActionResult> Get([FromQuery] string search = null, [FromQuery] int? page = 1, [FromQuery] int? pageCount = 25)
     {
-      var costumes = await _costumesBusiness.GetCostumes();
+      if (!page.HasValue)
+        page = 1;
+      if (!pageCount.HasValue)
+        pageCount = 25;
+      var costumes = await _costumesBusiness.GetCostumes(search, page.Value, pageCount.Value);
       return Ok(costumes);
     }
 

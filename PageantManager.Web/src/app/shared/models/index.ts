@@ -1,5 +1,6 @@
 export * from './costume-garment';
 export * from './costume';
+export * from './itemsModel';
 export * from './garment-measurement-type';
 export * from './garment-measurement';
 export * from './garment-type';

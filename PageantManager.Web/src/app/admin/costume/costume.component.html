@@ -1,15 +1,56 @@
-<h2>Costume <span *ngIf="newCostume">- New</span></h2>
+<h2>Costume
+  <span *ngIf="newCostume">- New</span>
+</h2>
 
-<form [formGroup]="form" novalidate (submit)="submit()">
-  <mat-form-field>
-    <input matInput type="text" placeholder="Name" formControlName="name" maxlength="50" />
-  </mat-form-field>
-  <mat-form-field>
+<app-loading *ngIf='loading'></app-loading>
+<div *ngIf="!loading">
+  <form [formGroup]="form" novalidate (submit)="submit()">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Name" formControlName="name" maxlength="50" />
+    </mat-form-field>
+    <mat-form-field>
       <input matInput type="text" placeholder="Description" formControlName="description" maxlength="250" />
     </mat-form-field>
-    <img *ngIf="form.controls['photo'].value" [src]="form.controls['photo'].value" alt="">
-    <button mat-button appFilePicker (filePick)='fileSelected($event)' accept=".jpg">Select Photo</button>
-  <button mat-button color="primary" [disabled]='loading'>
-    <app-loading *ngIf="loading" size="xsm"></app-loading>
-    Save</button>
-</form>
+    <div>
+      <img *ngIf="form.controls['photo'].value" [src]="form.controls['photo'].value" alt="">
+      <div>
+        <button mat-raised-button appFilePicker color="accent" (filePick)='fileSelected($event)' accept=".jpg">Select Photo</button>
+        <button mat-raised-button color="accent" *ngIf="form.controls['photo'].value" (click)="deletePhoto()">Delete Photo</button>
+      </div>
+    </div>
+    <div>
+      <div class="search">
+        <mat-form-field>
+          <mat-icon matPrefix>search</mat-icon>
+          <input type="text" matInput placeholder="Search" formControlName="search" autofocus>
+        </mat-form-field>
+        <app-loading *ngIf='loadingGarmentType'></app-loading>
+        <div *ngIf='!loadingGarmentType'>
+            <mat-list>
+          <mat-list-item *ngFor="let gt of garmentTypes.items">
+              <mat-icon *ngIf="!gt.photo" matListIcon>camera_alt</mat-icon>
+              <img matListAvatar *ngIf="gt.photo" [src]="gt.photo" alt="Garment Type Photo">
+              <h4 mat-line>{{gt.name}}</h4>
+              <p mat-line> {{gt.description}} </p>
+              <button mat-icon-button type="button" (click)="addGarmentType(gt)">
+                  <mat-icon>add_circle</mat-icon>
+               </button>
+          </mat-list-item>
+          </mat-list>
+        </div>
+        <mat-paginator [length]="garmentTypes.count"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="pageChanged($event)"
+              [pageIndex]="page">
+        </mat-paginator>
+      </div>
+    </div>
+    <div class="save">
+      <button mat-raised-button color="primary" [disabled]='loading'>
+        <app-loading *ngIf="loading" size="xsm"></app-loading>
+        Save</button>
+      <button mat-raised-button color="accent" (click)="back()">Cancel</button>
+    </div>
+  </form>
+</div>
