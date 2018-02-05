@@ -73,9 +73,9 @@ namespace PageantManager.Business.Business
 		    return q;
 	    }
 	    
-	    public async Task<CostumeModel> GetCostume(int id)
+	    public async Task<CostumeModel> GetCostumeModel(int id)
 	    {
-		    var costume = await _ctx.Costumes.FindAsync(id);
+		    var costume = await GetCostume(id);
 		    return costume != null ? Mapper.Map<CostumeModel>(costume) : null;
 	    }
 
@@ -107,18 +107,32 @@ namespace PageantManager.Business.Business
 	    
 	    public async Task<CostumeModel> UpdateCostume(CostumeModel model)
 	    {
-		    var costume = await _ctx.Costumes.FindAsync(model.CostumeId);
+		    var costume = await GetCostume(model.CostumeId);
+		    
 		    if(costume == null)
 		    {
-			    costume = new Costume();
+			    costume = new Costume
+			    {
+				    CostumeGarments = new List<CostumeGarment>()
+			    };
 			    _ctx.Costumes.Add(costume);
 		    }
-		    Mapper.Map(model, costume);
+		    _ctx.Entry(costume).CurrentValues.SetValues(model);
+		    
+		    var ids = model.CostumeGarments.Where(mt => mt.CostumeGarmentId != 0).Select(mt =>  mt.CostumeGarmentId).ToList();
+		    _ctx.CostumeGarments.RemoveRange(costume.CostumeGarments.Where(mt=>!ids.Contains(mt.CostumeGarmentId)));
+		    
+		    foreach (var costumeGarment in model.CostumeGarments.Where(cg=>cg.CostumeGarmentId == 0))
+		    {
+				costume.CostumeGarments.Add(new CostumeGarment()
+				{
+					GarmentTypeId = costumeGarment.GarmentTypeId
+				});
+		    }
 
 		    await _ctx.SaveChangesAsync();
 
-		    Mapper.Map(costume, model);
-		    return model;
+		    return await GetCostumeModel(costume.CostumeId);
 	    }
 	    
 	    public async Task DeleteCostume(int id)
@@ -126,6 +140,15 @@ namespace PageantManager.Business.Business
 		    var costume = await _ctx.Costumes.FindAsync(id);
 		    _ctx.Costumes.Remove(costume);
 		    await _ctx.SaveChangesAsync();
+	    }
+
+	    private async Task<Costume> GetCostume(int id)
+	    {
+		    var costume = await _ctx.Costumes
+			    .Include(c => c.CostumeGarments)
+			    .ThenInclude(cg=>cg.GarmentType)
+			    .SingleOrDefaultAsync(c => c.CostumeId == id);
+		    return costume;
 	    }
     }
 }

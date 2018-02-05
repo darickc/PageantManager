@@ -5,10 +5,19 @@ img{
 .save{
   margin-top: 10px;
 }
-.search{
-  margin-top: 10px;
-  max-width: 400px;
-}
-.mat-paginator-container{
-  justify-content: flex-start;
+
+@media screen and (min-width: 768px) {
+  .costume{
+    display: flex;
+    flex-wrap: wrap;
+    >div{
+      flex: 1 50%;
+    }
+    >div:last-child{
+      flex: 1 100%;
+    }
+  }
+  .garmentTypes{
+    margin-top: 10px;
+  }
 }

@@ -16,11 +16,11 @@ export class GarmentTypesComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    // this.garmentTypesService.getGarmentTypes()
-    //   .finally(() => this.loading = false)
-    //   .subscribe(gt => {
-    //     this.garmentTypes = gt;
-    //   });
+    this.garmentTypesService.getGarmentTypes('', 1, 25)
+      .finally(() => this.loading = false)
+      .subscribe(gt => {
+        this.garmentTypes = gt.items;
+      });
   }
 
 }

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/finally';
+import * as _ from 'lodash';
 import { FormGroup, FormBuilder, FormControl, FormArray, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CostumesService, GarmentTypesService, ItemsModel, Costume, PickedFile, GarmentType } from '../../shared';
+import { CostumesService, GarmentTypesService, ItemsModel, Costume, PickedFile, GarmentType, CostumeGarment} from '../../shared';
 
 @Component({
   templateUrl: './costume.component.html',
@@ -16,6 +17,7 @@ export class CostumeComponent implements OnInit {
   loadingGarmentType: boolean;
   costume: Costume;
   garmentTypes: ItemsModel<GarmentType>;
+  costumeGarments: CostumeGarment[];
   form: FormGroup;
   newCostume: boolean;
   pageSize: number;
@@ -41,14 +43,19 @@ export class CostumeComponent implements OnInit {
     });
 
     this.form.controls.search.valueChanges.debounceTime(500).subscribe(search => {
-      this.page = 0;
-      this.getGarmentTypes();
+      if (search) {
+        this.page = 0;
+        this.getGarmentTypes();
+      } else {
+        this.garmentTypes = null;
+      }
     });
 
     const id = this.route.snapshot.params.id;
 
     if (id === 'new') {
       this.newCostume = true;
+      this.costumeGarments = [];
       this.form.reset();
     } else {
       this.loading = true;
@@ -84,7 +91,9 @@ export class CostumeComponent implements OnInit {
       return;
     }
 
-    this.costumesService.updateCostume(this.form.value)
+    const c = this.form.value as Costume;
+    c.costumeGarments = this.costumeGarments;
+    this.costumesService.updateCostume(c)
     .finally(() => this.loading = false)
     .subscribe(costume => {
       this.setCostume(costume);
@@ -93,6 +102,7 @@ export class CostumeComponent implements OnInit {
 
   setCostume(costume: Costume) {
     this.newCostume = false;
+    this.costumeGarments = costume.costumeGarments ? costume.costumeGarments : [];
     this.form.reset();
     this.form.patchValue(costume);
   }
@@ -106,6 +116,17 @@ export class CostumeComponent implements OnInit {
   }
 
   addGarmentType(garmentType: GarmentType) {
+    if (_.findIndex(this.costumeGarments, { garmentTypeId: garmentType.garmentTypeId }) > -1) {
+      return;
+    }
 
+    this.costumeGarments.push(new CostumeGarment({
+      garmentType: garmentType,
+      garmentTypeId: garmentType.garmentTypeId
+    }));
+  }
+
+  removeCostumeGarment(index: number) {
+    this.costumeGarments.splice(index, 1);
   }
 }

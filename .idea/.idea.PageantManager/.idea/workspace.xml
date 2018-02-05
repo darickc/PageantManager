@@ -2,28 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7cd595b-e366-48f0-91af-36e76657ba8a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Business/Models/CostumesModel.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/contentModel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/PageanManager.db" afterPath="$PROJECT_DIR$/PageantManager.Web/PageanManager.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Business.Test/Tests/CostumesBusinessTest.cs" afterPath="$PROJECT_DIR$/PageantManager.Business.Test/Tests/CostumesBusinessTest.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs" afterPath="$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Business/Business/GarmentTypesBusiness.cs" afterPath="$PROJECT_DIR$/PageantManager.Business/Business/GarmentTypesBusiness.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Business/Models/ItemsModel.cs" afterPath="$PROJECT_DIR$/PageantManager.Business/Models/ItemsModel.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs" afterPath="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/GarmentTypesController.cs" afterPath="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/GarmentTypesController.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costume/costume.component.html" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costume/costume.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costume/costume.component.scss" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costume/costume.component.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costume/costume.component.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costume/costume.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costumes/costumes.component.html" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costumes/costumes.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costumes/costumes.component.scss" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costumes/costumes.component.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costumes/costumes.component.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costumes/costumes.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/garment-types/garment-types.component.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/garment-types/garment-types.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/garment/garment.component.scss" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/garment/garment.component.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/models/index.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/models/index.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/services/costumes.service.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/services/costumes.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/services/garment-types.service.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/services/garment-types.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/models/costume-garment.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/models/costume-garment.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/shared.module.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/shared.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/styles.scss" afterPath="$PROJECT_DIR$/PageantManager.Web/src/styles.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,26 +52,26 @@
       <file leaf-file-name="CostumesController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            <state relative-caret-position="585">
+              <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
               <folding>
-                <marker date="1517338717082" expanded="false" signature="6:173" ph="..." />
-                <marker date="1517338717082" expanded="true" signature="219:2994" ph="{...}" />
-                <marker date="1517338717082" expanded="true" signature="224:260" ph="/// ... " />
-                <marker date="1517338717082" expanded="true" signature="366:2992" ph="{...}" />
-                <marker date="1517338717082" expanded="true" signature="433:521" ph="/// ... " />
-                <marker date="1517338717082" expanded="true" signature="586:642" ph="{...}" />
-                <marker date="1517338717082" expanded="true" signature="648:729" ph="/// Get Costumes ... " />
-                <marker date="1517338717082" expanded="true" signature="944:1177" ph="{...}" />
-                <marker date="1517338717082" expanded="true" signature="1183:1303" ph="/// Get Costume by Id ... " />
-                <marker date="1517338717082" expanded="true" signature="1427:1525" ph="{...}" />
-                <marker date="1517338717082" expanded="true" signature="1531:1690" ph="/// Search form Costumes that fit the measurements ... " />
-                <marker date="1517338717082" expanded="true" signature="1871:1985" ph="{...}" />
-                <marker date="1517338717082" expanded="true" signature="1991:2188" ph="/// Get costume and garments that fit the measurements ... " />
-                <marker date="1517338717082" expanded="true" signature="2386:2500" ph="{...}" />
-                <marker date="1517338717082" expanded="true" signature="2506:2633" ph="/// Update/Create Costume ... " />
-                <marker date="1517338717082" expanded="true" signature="2789:2988" ph="{...}" />
-                <marker date="1517338717082" expanded="true" signature="2825:2929" ph="{...}" />
+                <marker date="1517593407710" expanded="false" signature="6:173" ph="..." />
+                <marker date="1517593407710" expanded="true" signature="219:2999" ph="{...}" />
+                <marker date="1517593407710" expanded="true" signature="224:260" ph="/// ... " />
+                <marker date="1517593407710" expanded="true" signature="366:2997" ph="{...}" />
+                <marker date="1517593407710" expanded="true" signature="433:521" ph="/// ... " />
+                <marker date="1517593407710" expanded="true" signature="586:642" ph="{...}" />
+                <marker date="1517593407710" expanded="true" signature="648:729" ph="/// Get Costumes ... " />
+                <marker date="1517593407710" expanded="true" signature="944:1177" ph="{...}" />
+                <marker date="1517593407710" expanded="true" signature="1183:1303" ph="/// Get Costume by Id ... " />
+                <marker date="1517593407710" expanded="true" signature="1427:1530" ph="{...}" />
+                <marker date="1517593407710" expanded="true" signature="1536:1695" ph="/// Search form Costumes that fit the measurements ... " />
+                <marker date="1517593407710" expanded="true" signature="1876:1990" ph="{...}" />
+                <marker date="1517593407710" expanded="true" signature="1996:2193" ph="/// Get costume and garments that fit the measurements ... " />
+                <marker date="1517593407710" expanded="true" signature="2391:2505" ph="{...}" />
+                <marker date="1517593407710" expanded="true" signature="2511:2638" ph="/// Update/Create Costume ... " />
+                <marker date="1517593407710" expanded="true" signature="2794:2993" ph="{...}" />
+                <marker date="1517593407710" expanded="true" signature="2830:2934" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -141,26 +130,30 @@
       <file leaf-file-name="CostumesBusiness.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+            <state relative-caret-position="367">
+              <caret line="114" column="17" lean-forward="false" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
               <folding>
-                <marker date="1517348451200" expanded="true" signature="6:229" ph="..." />
-                <marker date="1517348451200" expanded="true" signature="273:4042" ph="{...}" />
-                <marker date="1517348451200" expanded="true" signature="309:4040" ph="{...}" />
-                <marker date="1517348451200" expanded="false" signature="408:431" ph="{...}" />
-                <marker date="1517348451200" expanded="false" signature="438:705" ph="/* public async Task&lt;List&lt;CostumeModel&gt;&gt; GetCostumes(int pageantId) ... */" />
-                <marker date="1517348451200" expanded="false" signature="801:1298" ph="{...}" />
-                <marker date="1517348451200" expanded="true" signature="1405:1990" ph="{...}" />
-                <marker date="1517348451200" expanded="true" signature="1506:1601" ph="{...}" />
-                <marker date="1517348451200" expanded="true" signature="1658:1781" ph="{...}" />
-                <marker date="1517348451200" expanded="true" signature="2063:2273" ph="{...}" />
-                <marker date="1517348451200" expanded="false" signature="2335:2477" ph="{...}" />
-                <marker date="1517348451200" expanded="false" signature="2571:3445" ph="{...}" />
-                <marker date="1517348451200" expanded="true" signature="2907:3419" ph="{...}" />
-                <marker date="1517348451200" expanded="true" signature="2978:3362" ph="{...}" />
-                <marker date="1517348451200" expanded="false" signature="3522:3840" ph="{...}" />
-                <marker date="1517348451200" expanded="true" signature="3623:3706" ph="{...}" />
-                <marker date="1517348451200" expanded="false" signature="3891:4034" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="6:229" ph="..." />
+                <marker date="1517593397364" expanded="true" signature="273:4860" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="309:4858" ph="{...}" />
+                <marker date="1517593397364" expanded="false" signature="408:431" ph="{...}" />
+                <marker date="1517593397364" expanded="false" signature="438:705" ph="/* public async Task&lt;List&lt;CostumeModel&gt;&gt; GetCostumes(int pageantId) ... */" />
+                <marker date="1517593397364" expanded="false" signature="801:1298" ph="{...}" />
+                <marker date="1517593397364" expanded="false" signature="1405:1990" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="1506:1601" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="1658:1781" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="2063:2273" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="2340:2469" ph="{...}" />
+                <marker date="1517593397364" expanded="false" signature="2563:3437" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="2899:3411" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="2970:3354" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="3514:4395" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="3609:3761" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="3654:3717" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="4161:4294" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="4227:4284" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="4446:4589" ph="{...}" />
+                <marker date="1517593397364" expanded="true" signature="4642:4852" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -169,29 +162,29 @@
       <file leaf-file-name="GarmentTypesBusiness.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/GarmentTypesBusiness.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state relative-caret-position="570">
+              <caret line="103" column="21" lean-forward="false" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
               <folding>
-                <marker date="1517348315557" expanded="true" signature="6:229" ph="..." />
-                <marker date="1517348315557" expanded="true" signature="273:4179" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="313:4177" ph="{...}" />
-                <marker date="1517348315557" expanded="false" signature="416:439" ph="{...}" />
-                <marker date="1517348315557" expanded="false" signature="505:667" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="782:1387" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="891:986" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="1043:1166" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="1468:1682" ph="{...}" />
-                <marker date="1517348315557" expanded="false" signature="1777:2264" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="1963:2110" ph="{...}" />
-                <marker date="1517348315557" expanded="false" signature="2353:3957" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="2572:2756" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="2625:2704" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="2933:3611" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="3004:3297" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="3207:3286" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="3309:3603" ph="{...}" />
-                <marker date="1517348315557" expanded="true" signature="3503:3594" ph="{...}" />
-                <marker date="1517348315557" expanded="false" signature="4012:4171" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="6:229" ph="..." />
+                <marker date="1517593100112" expanded="true" signature="273:4191" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="313:4189" ph="{...}" />
+                <marker date="1517593100112" expanded="false" signature="416:439" ph="{...}" />
+                <marker date="1517593100112" expanded="false" signature="505:667" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="782:1387" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="891:986" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="1043:1166" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="1468:1682" ph="{...}" />
+                <marker date="1517593100112" expanded="false" signature="1777:2264" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="1963:2110" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="2353:3969" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="2572:2756" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="2625:2704" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="3177:3855" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="3248:3541" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="3451:3530" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="3553:3847" ph="{...}" />
+                <marker date="1517593100112" expanded="true" signature="3747:3838" ph="{...}" />
+                <marker date="1517593100112" expanded="false" signature="4024:4183" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -205,12 +198,14 @@
       <find>pageant</find>
       <find>garmentType</find>
       <find>GarmentType</find>
+      <find>garmentType.GarmentMeasurementTypes</find>
     </findStrings>
     <replaceStrings>
       <replace>GarmentType</replace>
       <replace>garmentType</replace>
       <replace>costume</replace>
       <replace>Garment</replace>
+      <replace>costume.CostumeGarments</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -320,10 +315,10 @@
         <option value="$PROJECT_DIR$/PageantManager.Business.Test/Tests/CostumesBusinessTest.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Business/Models/CostumesModel.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Business/Models/ItemsModel.cs" />
-        <option value="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/GarmentTypesController.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Business/Business/GarmentTypesBusiness.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs" />
+        <option value="$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs" />
       </list>
     </option>
   </component>
@@ -481,7 +476,7 @@
       <workItem from="1516335367684" duration="3533000" />
       <workItem from="1516384454212" duration="23408000" />
       <workItem from="1516749333756" duration="16952000" />
-      <workItem from="1517325955422" duration="4976000" />
+      <workItem from="1517325955422" duration="8836000" />
     </task>
     <task id="LOCAL-00001" summary="none">
       <created>1508125757730</created>
@@ -515,7 +510,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68167000" />
+    <option name="totallyTimeSpent" value="72027000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -527,8 +522,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -538,7 +532,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32815534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -766,6 +760,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -847,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PageantManager.Web/proxy.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PageantManager.Web/.angular-cli.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -878,13 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PageantManager.Web/proxy.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -990,32 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding>
-            <marker date="1517338717082" expanded="false" signature="6:173" ph="..." />
-            <marker date="1517338717082" expanded="true" signature="219:2994" ph="{...}" />
-            <marker date="1517338717082" expanded="true" signature="224:260" ph="/// ... " />
-            <marker date="1517338717082" expanded="true" signature="366:2992" ph="{...}" />
-            <marker date="1517338717082" expanded="true" signature="433:521" ph="/// ... " />
-            <marker date="1517338717082" expanded="true" signature="586:642" ph="{...}" />
-            <marker date="1517338717082" expanded="true" signature="648:729" ph="/// Get Costumes ... " />
-            <marker date="1517338717082" expanded="true" signature="944:1177" ph="{...}" />
-            <marker date="1517338717082" expanded="true" signature="1183:1303" ph="/// Get Costume by Id ... " />
-            <marker date="1517338717082" expanded="true" signature="1427:1525" ph="{...}" />
-            <marker date="1517338717082" expanded="true" signature="1531:1690" ph="/// Search form Costumes that fit the measurements ... " />
-            <marker date="1517338717082" expanded="true" signature="1871:1985" ph="{...}" />
-            <marker date="1517338717082" expanded="true" signature="1991:2188" ph="/// Get costume and garments that fit the measurements ... " />
-            <marker date="1517338717082" expanded="true" signature="2386:2500" ph="{...}" />
-            <marker date="1517338717082" expanded="true" signature="2506:2633" ph="/// Update/Create Costume ... " />
-            <marker date="1517338717082" expanded="true" signature="2789:2988" ph="{...}" />
-            <marker date="1517338717082" expanded="true" signature="2825:2929" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/GarmentTypesController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1039,57 +993,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Web/proxy.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1517284590804" expanded="true" signature="14:104" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Web/proxy.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/GarmentTypesBusiness.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        <state relative-caret-position="570">
+          <caret line="103" column="21" lean-forward="false" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
           <folding>
-            <marker date="1517348315557" expanded="true" signature="6:229" ph="..." />
-            <marker date="1517348315557" expanded="true" signature="273:4179" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="313:4177" ph="{...}" />
-            <marker date="1517348315557" expanded="false" signature="416:439" ph="{...}" />
-            <marker date="1517348315557" expanded="false" signature="505:667" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="782:1387" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="891:986" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="1043:1166" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="1468:1682" ph="{...}" />
-            <marker date="1517348315557" expanded="false" signature="1777:2264" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="1963:2110" ph="{...}" />
-            <marker date="1517348315557" expanded="false" signature="2353:3957" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="2572:2756" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="2625:2704" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="2933:3611" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="3004:3297" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="3207:3286" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="3309:3603" ph="{...}" />
-            <marker date="1517348315557" expanded="true" signature="3503:3594" ph="{...}" />
-            <marker date="1517348315557" expanded="false" signature="4012:4171" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="6:229" ph="..." />
+            <marker date="1517593100112" expanded="true" signature="273:4191" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="313:4189" ph="{...}" />
+            <marker date="1517593100112" expanded="false" signature="416:439" ph="{...}" />
+            <marker date="1517593100112" expanded="false" signature="505:667" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="782:1387" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="891:986" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="1043:1166" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="1468:1682" ph="{...}" />
+            <marker date="1517593100112" expanded="false" signature="1777:2264" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="1963:2110" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="2353:3969" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="2572:2756" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="2625:2704" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="3177:3855" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="3248:3541" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="3451:3530" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="3553:3847" ph="{...}" />
+            <marker date="1517593100112" expanded="true" signature="3747:3838" ph="{...}" />
+            <marker date="1517593100112" expanded="false" signature="4024:4183" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageantManager.Web/Controllers/Api/CostumesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding>
+            <marker date="1517593407710" expanded="false" signature="6:173" ph="..." />
+            <marker date="1517593407710" expanded="true" signature="219:2999" ph="{...}" />
+            <marker date="1517593407710" expanded="true" signature="224:260" ph="/// ... " />
+            <marker date="1517593407710" expanded="true" signature="366:2997" ph="{...}" />
+            <marker date="1517593407710" expanded="true" signature="433:521" ph="/// ... " />
+            <marker date="1517593407710" expanded="true" signature="586:642" ph="{...}" />
+            <marker date="1517593407710" expanded="true" signature="648:729" ph="/// Get Costumes ... " />
+            <marker date="1517593407710" expanded="true" signature="944:1177" ph="{...}" />
+            <marker date="1517593407710" expanded="true" signature="1183:1303" ph="/// Get Costume by Id ... " />
+            <marker date="1517593407710" expanded="true" signature="1427:1530" ph="{...}" />
+            <marker date="1517593407710" expanded="true" signature="1536:1695" ph="/// Search form Costumes that fit the measurements ... " />
+            <marker date="1517593407710" expanded="true" signature="1876:1990" ph="{...}" />
+            <marker date="1517593407710" expanded="true" signature="1996:2193" ph="/// Get costume and garments that fit the measurements ... " />
+            <marker date="1517593407710" expanded="true" signature="2391:2505" ph="{...}" />
+            <marker date="1517593407710" expanded="true" signature="2511:2638" ph="/// Update/Create Costume ... " />
+            <marker date="1517593407710" expanded="true" signature="2794:2993" ph="{...}" />
+            <marker date="1517593407710" expanded="true" signature="2830:2934" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        <state relative-caret-position="367">
+          <caret line="114" column="17" lean-forward="false" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
           <folding>
-            <marker date="1517348451200" expanded="true" signature="6:229" ph="..." />
-            <marker date="1517348451200" expanded="true" signature="273:4042" ph="{...}" />
-            <marker date="1517348451200" expanded="true" signature="309:4040" ph="{...}" />
-            <marker date="1517348451200" expanded="false" signature="408:431" ph="{...}" />
-            <marker date="1517348451200" expanded="false" signature="438:705" ph="/* public async Task&lt;List&lt;CostumeModel&gt;&gt; GetCostumes(int pageantId) ... */" />
-            <marker date="1517348451200" expanded="false" signature="801:1298" ph="{...}" />
-            <marker date="1517348451200" expanded="true" signature="1405:1990" ph="{...}" />
-            <marker date="1517348451200" expanded="true" signature="1506:1601" ph="{...}" />
-            <marker date="1517348451200" expanded="true" signature="1658:1781" ph="{...}" />
-            <marker date="1517348451200" expanded="true" signature="2063:2273" ph="{...}" />
-            <marker date="1517348451200" expanded="false" signature="2335:2477" ph="{...}" />
-            <marker date="1517348451200" expanded="false" signature="2571:3445" ph="{...}" />
-            <marker date="1517348451200" expanded="true" signature="2907:3419" ph="{...}" />
-            <marker date="1517348451200" expanded="true" signature="2978:3362" ph="{...}" />
-            <marker date="1517348451200" expanded="false" signature="3522:3840" ph="{...}" />
-            <marker date="1517348451200" expanded="true" signature="3623:3706" ph="{...}" />
-            <marker date="1517348451200" expanded="false" signature="3891:4034" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="6:229" ph="..." />
+            <marker date="1517593397364" expanded="true" signature="273:4860" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="309:4858" ph="{...}" />
+            <marker date="1517593397364" expanded="false" signature="408:431" ph="{...}" />
+            <marker date="1517593397364" expanded="false" signature="438:705" ph="/* public async Task&lt;List&lt;CostumeModel&gt;&gt; GetCostumes(int pageantId) ... */" />
+            <marker date="1517593397364" expanded="false" signature="801:1298" ph="{...}" />
+            <marker date="1517593397364" expanded="false" signature="1405:1990" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="1506:1601" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="1658:1781" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="2063:2273" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="2340:2469" ph="{...}" />
+            <marker date="1517593397364" expanded="false" signature="2563:3437" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="2899:3411" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="2970:3354" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="3514:4395" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="3609:3761" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="3654:3717" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="4161:4294" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="4227:4284" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="4446:4589" ph="{...}" />
+            <marker date="1517593397364" expanded="true" signature="4642:4852" ph="{...}" />
           </folding>
         </state>
       </provider>

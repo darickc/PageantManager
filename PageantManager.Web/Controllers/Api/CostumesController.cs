@@ -48,7 +48,7 @@ namespace PageantManager.Web.Controllers.Api
     [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(CostumeModel), 200)]public async Task<IActionResult> Get(int id)
     {
-      var costume = await _costumesBusiness.GetCostume(id);
+      var costume = await _costumesBusiness.GetCostumeModel(id);
       return Ok(costume);
     }
 

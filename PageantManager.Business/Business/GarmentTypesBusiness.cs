@@ -91,6 +91,9 @@ namespace PageantManager.Business.Business
 		    }
 		    _ctx.Entry(garmentType).CurrentValues.SetValues(model);
 		    //Mapper.Map(model, garmentType);
+		    
+		    var ids = model.GarmentMeasurementTypes.Select(mt => mt.GarmentMeasurementTypeId).ToList();
+		    _ctx.GarmentMeasurementTypes.RemoveRange(garmentType.GarmentMeasurementTypes.Where(mt=>!ids.Contains(mt.GarmentMeasurementTypeId)));
 
 		    foreach (var measurementTypeModel in model.GarmentMeasurementTypes)
 		    {
@@ -112,13 +115,10 @@ namespace PageantManager.Business.Business
 				    }
 			    }
 		    }
-		    
-		    var ids = model.GarmentMeasurementTypes.Select(mt => mt.GarmentMeasurementTypeId).ToList();
-		    _ctx.GarmentMeasurementTypes.RemoveRange(garmentType.GarmentMeasurementTypes.Where(mt=>!ids.Contains(mt.GarmentMeasurementTypeId)));
 
 		    await _ctx.SaveChangesAsync();
 
-		    return Mapper.Map<GarmentTypeModel>(garmentType);
+		    return await GetGarmentType(garmentType.GarmentTypeId, true);
 	    }
 	    
 	    public async Task DeleteGarmentType(int id)
