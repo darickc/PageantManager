@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using PageantManager.Business.Entities;
+using PageantManager.Business.Enums;
 using System;
 
 namespace PageantManager.Web.Migrations
@@ -26,6 +27,8 @@ namespace PageantManager.Web.Migrations
 
                     b.Property<string>("Description")
                         .HasMaxLength(150);
+
+                    b.Property<int>("Gender");
 
                     b.Property<string>("Name")
                         .HasMaxLength(50);
@@ -68,6 +71,8 @@ namespace PageantManager.Web.Migrations
 
                     b.Property<string>("Photo");
 
+                    b.Property<string>("PhotoName");
+
                     b.Property<DateTime?>("RetiredDate");
 
                     b.HasKey("GarmentId");
@@ -104,15 +109,11 @@ namespace PageantManager.Web.Migrations
                     b.Property<int>("GarmentMeasurementTypeId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("GarmentId");
-
                     b.Property<int>("GarmentTypeId");
 
                     b.Property<int>("MeasurementTypeId");
 
                     b.HasKey("GarmentMeasurementTypeId");
-
-                    b.HasIndex("GarmentId");
 
                     b.HasIndex("GarmentTypeId");
 
@@ -188,12 +189,8 @@ namespace PageantManager.Web.Migrations
 
             modelBuilder.Entity("PageantManager.Business.Entities.GarmentMeasurementType", b =>
                 {
-                    b.HasOne("PageantManager.Business.Entities.Garment")
-                        .WithMany("GarmentMeasurementTypes")
-                        .HasForeignKey("GarmentId");
-
                     b.HasOne("PageantManager.Business.Entities.GarmentType", "GarmentType")
-                        .WithMany()
+                        .WithMany("GarmentMeasurementTypes")
                         .HasForeignKey("GarmentTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
 

@@ -13,6 +13,8 @@ namespace PageantManager.Business.Entities
         public DateTime? RetiredDate { get; set; }
         public bool CheckedOut { get; set; }
         public string Photo { get; set; }
+        public string PhotoName { get; set; }
+
 
         public GarmentType GarmentType { get; set; }
         public List<GarmentMeasurement> GarmentMeasurements { get; set; }
