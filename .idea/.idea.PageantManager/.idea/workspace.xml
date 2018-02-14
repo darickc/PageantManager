@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7cd595b-e366-48f0-91af-36e76657ba8a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Console/PageantManager.Console.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/PageanManager.db" afterPath="$PROJECT_DIR$/PageantManager.Web/PageanManager.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Console/DataImport.cs" afterPath="$PROJECT_DIR$/PageantManager.Console/DataImport.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Console/PageantManager.Console.csproj" afterPath="$PROJECT_DIR$/PageantManager.Console/PageantManager.Console.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costumes/costumes.component.html" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/admin/costumes/costumes.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/home/home.component.html" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/home/home.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/home/home.component.scss" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/home/home.component.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,13 +68,13 @@
       <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PageantManager.Console/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="420">
+              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
               <folding>
-                <marker date="1518580729411" expanded="false" signature="6:251" ph="..." />
-                <marker date="1518580729411" expanded="true" signature="285:1254" ph="{...}" />
-                <marker date="1518580729411" expanded="true" signature="305:1252" ph="{...}" />
-                <marker date="1518580729411" expanded="true" signature="357:1246" ph="{...}" />
+                <marker date="1518585102986" expanded="false" signature="6:251" ph="..." />
+                <marker date="1518585102986" expanded="true" signature="285:1254" ph="{...}" />
+                <marker date="1518585102986" expanded="true" signature="305:1252" ph="{...}" />
+                <marker date="1518585102986" expanded="true" signature="357:1246" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -96,17 +101,36 @@
       <file leaf-file-name="DataImport.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PageantManager.Console/DataImport.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="14">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
-                <marker date="1518580729439" expanded="false" signature="6:190" ph="..." />
-                <marker date="1518580729439" expanded="true" signature="224:1865" ph="{...}" />
-                <marker date="1518580729439" expanded="true" signature="254:1863" ph="{...}" />
-                <marker date="1518580729439" expanded="true" signature="425:469" ph="{...}" />
-                <marker date="1518580729439" expanded="true" signature="505:1857" ph="{...}" />
-                <marker date="1518580729439" expanded="true" signature="687:1573" ph="{...}" />
-                <marker date="1518580729439" expanded="true" signature="867:1557" ph="{...}" />
-                <marker date="1518580729439" expanded="true" signature="1699:1847" ph="{...}" />
+                <marker date="1518585098638" expanded="false" signature="6:227" ph="..." />
+                <marker date="1518585098638" expanded="true" signature="261:6531" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="291:6529" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="773:1732" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="821:1379" ph="/* lengthMeasurementType = new MeasurementType ... */" />
+                <marker date="1518585098638" expanded="true" signature="1768:3262" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="1950:2836" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="2130:2820" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="2962:3207" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="3355:6523" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="3416:3567" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="3681:3863" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="3928:4137" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="4042:4121" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="4215:4423" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="4329:4407" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="4503:4712" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="4617:4696" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="4755:6330" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="4828:4966" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="5065:5380" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="5179:5360" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="5496:5812" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="5610:5792" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="5929:6248" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="6043:6228" ph="{...}" />
+                <marker date="1518585098638" expanded="true" signature="6415:6472" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -262,11 +286,11 @@
         <option value="$PROJECT_DIR$/PageantManager.Business/Entities/Costume.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Business/Entities/Garment.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Console/PageantManager.Console.csproj" />
-        <option value="$PROJECT_DIR$/PageantManager.Console/Program.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Console/YW_Manti_Final2.csv" />
         <option value="$PROJECT_DIR$/PageantManager.Console/CsvData.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Business/Enums/Gender.cs" />
         <option value="$PROJECT_DIR$/PageantManager.Console/DataImport.cs" />
+        <option value="$PROJECT_DIR$/PageantManager.Console/Program.cs" />
       </list>
     </option>
   </component>
@@ -309,11 +333,6 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="PageantManager (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PageantManager (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PageantManager.Console" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -340,7 +359,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Project.Default">
+  <component name="RunManager" selected=".NET Project.Console">
+    <configuration name="Console" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/PageantManager.Console/PageantManager.Console.csproj" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.0" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/PageantManager.Console/bin/Debug/netcoreapp2.0/PageantManager.Console.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Production" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+    </configuration>
     <configuration name="Default JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:5000" />
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/PageantManager.Web/PageantManager.Web.csproj" />
@@ -356,9 +389,10 @@
         <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
       </envs>
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Default JavaScript" />
+      <item index="1" class="java.lang.String" itemvalue=".NET Project.Console" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.Default JavaScript" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -385,7 +419,7 @@
       <workItem from="1516749333756" duration="16952000" />
       <workItem from="1517325955422" duration="8836000" />
       <workItem from="1517972969873" duration="6200000" />
-      <workItem from="1518580628467" duration="367000" />
+      <workItem from="1518580628467" duration="3734000" />
     </task>
     <task id="LOCAL-00001" summary="none">
       <created>1508125757730</created>
@@ -429,11 +463,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518581196555</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="none">
+      <created>1518581218773</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1518581218773</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78594000" />
+    <option name="totallyTimeSpent" value="81961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,6 +487,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -455,7 +497,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -466,7 +509,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -497,8 +539,21 @@
             </endOffsets>
           </properties>
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/PageantManager.Console/DataImport.cs</url>
+          <line>84</line>
+          <properties documentPath="$PROJECT_DIR$/PageantManager.Console/DataImport.cs">
+            <startOffsets>
+              <startOffset value="3221" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="3251" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -864,30 +919,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PageantManager.Console/DataImport.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="14">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <marker date="1518580729439" expanded="false" signature="6:190" ph="..." />
-            <marker date="1518580729439" expanded="true" signature="224:1865" ph="{...}" />
-            <marker date="1518580729439" expanded="true" signature="254:1863" ph="{...}" />
-            <marker date="1518580729439" expanded="true" signature="425:469" ph="{...}" />
-            <marker date="1518580729439" expanded="true" signature="505:1857" ph="{...}" />
-            <marker date="1518580729439" expanded="true" signature="687:1573" ph="{...}" />
-            <marker date="1518580729439" expanded="true" signature="867:1557" ph="{...}" />
-            <marker date="1518580729439" expanded="true" signature="1699:1847" ph="{...}" />
+            <marker date="1518585098638" expanded="false" signature="6:227" ph="..." />
+            <marker date="1518585098638" expanded="true" signature="261:6531" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="291:6529" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="773:1732" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="821:1379" ph="/* lengthMeasurementType = new MeasurementType ... */" />
+            <marker date="1518585098638" expanded="true" signature="1768:3262" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="1950:2836" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="2130:2820" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="2962:3207" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="3355:6523" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="3416:3567" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="3681:3863" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="3928:4137" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="4042:4121" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="4215:4423" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="4329:4407" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="4503:4712" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="4617:4696" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="4755:6330" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="4828:4966" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="5065:5380" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="5179:5360" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="5496:5812" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="5610:5792" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="5929:6248" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="6043:6228" ph="{...}" />
+            <marker date="1518585098638" expanded="true" signature="6415:6472" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PageantManager.Console/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        <state relative-caret-position="420">
+          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding>
-            <marker date="1518580729411" expanded="false" signature="6:251" ph="..." />
-            <marker date="1518580729411" expanded="true" signature="285:1254" ph="{...}" />
-            <marker date="1518580729411" expanded="true" signature="305:1252" ph="{...}" />
-            <marker date="1518580729411" expanded="true" signature="357:1246" ph="{...}" />
+            <marker date="1518585102986" expanded="false" signature="6:251" ph="..." />
+            <marker date="1518585102986" expanded="true" signature="285:1254" ph="{...}" />
+            <marker date="1518585102986" expanded="true" signature="305:1252" ph="{...}" />
+            <marker date="1518585102986" expanded="true" signature="357:1246" ph="{...}" />
           </folding>
         </state>
       </provider>
