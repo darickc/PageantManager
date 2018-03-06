@@ -1,32 +1,16 @@
-<!-- <div *ngFor="let m of measurements">
-  <mat-form-field>
-    <input matInput type="number" [placeholder]="m.measurementType.name" [ngMo]  />
-  </mat-form-field>
-</div> -->
-<div *ngIf="loading">
-  loading
-</div>
-<div *ngIf="!loading">
-
-  <form [formGroup]="form" novalidate (submit)="submit()">
-    <div formArrayName="measurements" *ngFor="let m of formArray.controls; let i=index">
-      <div [formGroupName]="i">
-        <mat-form-field>
-          <input matInput type="number" [placeholder]="measurementTypes[i].name" formControlName="value" />
-        </mat-form-field>
-      </div>
-    </div>
-    <button mat-button color="primary">Search</button>
-  </form>
-  <div class="costumes">
-    <mat-card *ngFor='let costume of costumes'>
-      <mat-card-header>
-        <mat-card-title>{{costume.name}}</mat-card-title>
-        <mat-card-subtitle>{{costume.description}}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <div class="photo" *ngIf='costume.photo' [ngStyle]="{'background-image': 'url(' + costume.photo + ')'}"></div>
-      </mat-card-content>
-    </mat-card>
-  </div>
+<div style="margin-top:20px;">
+  <mat-horizontal-stepper linear="true">
+    <mat-step [stepControl]="measurementsForm">
+      <ng-template matStepLabel>Enter Measurements</ng-template>
+      <app-measurements [measurementsForm]="measurementsForm" (onSearch)="onSearch($event)"></app-measurements>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Select Costume</ng-template>
+      <app-costumes [measurements]="measurements" (onSelectCostume)="onSelectCostume($event)"></app-costumes>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Select Garments</ng-template>
+        <app-garments></app-garments>
+      </mat-step>
+  </mat-horizontal-stepper>
 </div>

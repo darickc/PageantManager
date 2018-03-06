@@ -198,6 +198,11 @@
               <e p="home.component.scss" t="Include" />
               <e p="home.component.ts" t="Include" />
               <e p="home.module.ts" t="Include" />
+              <e p="measurements" t="Include">
+                <e p="measurements.component.html" t="Include" />
+                <e p="measurements.component.scss" t="Include" />
+                <e p="measurements.component.ts" t="Include" />
+              </e>
             </e>
             <e p="Shared" t="Include">
               <e p="components" t="Include">

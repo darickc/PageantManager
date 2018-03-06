@@ -1,0 +1,17 @@
+<div *ngIf="loading">
+  loading
+</div>
+<div *ngIf="!loading">
+
+  <!-- <form [formGroup]="measurementsForm" novalidate (submit)="submit()"> -->
+  <form [formGroup]="measurementsForm" novalidate (submit)="submit()">
+    <div formArrayName="measurements" *ngFor="let m of formArray.controls; let i=index">
+      <div [formGroupName]="i">
+        <mat-form-field>
+          <input matInput type="number" [placeholder]="measurementTypes[i].name" formControlName="value" />
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button color="primary" matStepperNext>Search</button>
+  </form>
+</div>

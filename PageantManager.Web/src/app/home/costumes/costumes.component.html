@@ -1,0 +1,14 @@
+<div class="costumes">
+    <mat-card *ngFor='let costume of costumes'>
+      <mat-card-header>
+        <mat-card-title>{{costume.name}}</mat-card-title>
+        <mat-card-subtitle>{{costume.description}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="photo" *ngIf='costume.photo' [ngStyle]="{'background-image': 'url(' + costume.photo + ')'}"></div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="selectCostume(costume)">Select</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
