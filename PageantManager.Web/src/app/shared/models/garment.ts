@@ -8,4 +8,5 @@ export class Garment {
   checkedOut: boolean;
   photo: string;
   garmentMeasurements: GarmentMeasurement[];
+  selected: boolean;
 }

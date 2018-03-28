@@ -20,7 +20,7 @@ namespace PageantManager.Business.Test
             IConfigurationRoot config = builder.Build();
 
             var services = new ServiceCollection();
-            services.AddDbContext<PageantManagerContext>(options => options.UseInMemoryDatabase("pm"));
+            //services.AddDbContext<PageantManagerContext>(options => options.UseInMemoryDatabase("pm"));
             Configuration.Configure(services);
             
             ServiceProvider = services.BuildServiceProvider();

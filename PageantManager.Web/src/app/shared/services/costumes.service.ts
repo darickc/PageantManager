@@ -30,6 +30,10 @@ export class CostumesService {
     return this.http.post<Costume[]>(`${this.url}/search`, measurements);
   }
 
+  searchCostumeGarments(id: number, measurements: Measurement[]): Observable<Costume> {
+    return this.http.post<Costume>(`${this.url}/search/${id}`, measurements);
+  }
+
   createCostume(costume: Costume): Observable<Costume> {
     return this.http.post<Costume>(`${this.url}`, costume);
   }

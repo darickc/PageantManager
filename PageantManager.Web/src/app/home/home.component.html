@@ -10,7 +10,7 @@
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>Select Garments</ng-template>
-        <app-garments></app-garments>
+        <app-garments [measurements]="measurements" [costumeId]="costumeId"></app-garments>
       </mat-step>
   </mat-horizontal-stepper>
 </div>

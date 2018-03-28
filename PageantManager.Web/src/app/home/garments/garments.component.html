@@ -1,3 +1,35 @@
-<p>
-  garments works!
-</p>
+<div *ngIf="costume">
+  <h3>{{costume.name}}</h3>
+  <h4>{{costume.description}}</h4>
+
+  <div class="costumes">
+    <div *ngFor='let costumeGarment of costume.costumeGarments'>
+      Garment Type: {{costumeGarment.garmentType.name}}
+      <div class="garments">
+        <mat-card *ngFor='let garment of costumeGarment.garmentType.garments'>
+          <img mat-card-image *ngIf="garment.photo" [src]="garment.photo" alt="Photo Garment">
+          <mat-card-content>
+            <table>
+              <tr *ngFor="let gm of garment.garmentMeasurements">
+                <td>{{gm.measurementType.name}}:</td>
+                <td>{{gm.min}}-{{gm.max}}</td>
+              </tr>
+            </table>
+
+            <!-- <div class="measurements" *ngFor="let gm of garment.garmentMeasurements">
+            <div>
+                {{gm.measurementType.name}}:
+            </div>
+            <div>
+              {{gm.min}}-{{gm.max}}
+            </div>
+          </div> -->
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Select</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

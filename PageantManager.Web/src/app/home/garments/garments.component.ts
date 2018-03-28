@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Costume } from '../../shared';
+import { CostumesService } from '../../shared/services';
+import { Costume, Measurement } from '../../shared';
 
 @Component({
   selector: 'app-garments',
@@ -8,21 +9,33 @@ import { Costume } from '../../shared';
 })
 export class GarmentsComponent implements OnInit {
 
-  @Input() costume: Costume;
+  loading: boolean;
+  @Input() measurements: Measurement[];
+  @Input() costumeId: number;
+  costume: Costume;
 
-  constructor() { }
+  constructor(private costumesService: CostumesService) { }
 
   ngOnInit() {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if(changes.costume){
-
+    if(changes.costumeId){
+      this.loadCostume(changes.costumeId.currentValue);
     }
   }
 
-  loadCostume(){
-
+  loadCostume(id: number){
+    if(!id)
+      return;
+    this.loading = true;
+    this.costumesService.searchCostumeGarments(id, this.measurements)
+      .finally(()=>{
+        this.loading = false;
+      })
+      .subscribe((costume)=>{
+        this.costume = costume;
+      });
   }
 
 }

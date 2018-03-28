@@ -98,7 +98,13 @@ namespace PageantManager.Business.Business
 					    g.GarmentMeasurements.All(m => measurements.Any(m2 =>
 						    m.MeasurementTypeId == m2.MeasurementType.MeasurementTypeId &&
 						    m.Min <= m2.Value && 
-						    m2.Value <= m.Max))).ToList();
+						    m2.Value <= m.Max)))
+					    .ToList();
+
+				    foreach (var garment in costumeGarment.GarmentType.Garments)
+				    {
+					    garment.GarmentMeasurements = garment.GarmentMeasurements.OrderBy(g => g.MeasurementType.Name).ToList();
+				    }
 			    }
 			    return Mapper.Map<CostumeModel>(costume);
 		    }

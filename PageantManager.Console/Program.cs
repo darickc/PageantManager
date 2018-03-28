@@ -3,8 +3,10 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PageantManager.Business.Entities;
-using PageantManager.Business.Utilities;
+using PageantManager.Core.Interfaces;
+using PageantManager.Infrastructure.Data;
+using PageantManager.Infrastructure.Utilities;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace PageantManager.Console
 {
@@ -23,13 +25,14 @@ namespace PageantManager.Console
             services.AddDbContext<PageantManagerContext>(options =>
                 options.UseSqlite("Data Source=../PageantManager.Web/PageanManager.db"));
             Configuration.Configure(services);
-            services.AddScoped<DataImport>();
+//            services.AddScoped<DataImport>();
             
             ServiceProvider provider = services.BuildServiceProvider();
             
-            
-            var dataImport = provider.GetService<DataImport>();
-            await dataImport.Import();
+            var costumeService = provider.GetService<ICostumeService>();
+            var costumes = await costumeService.GetCostumes("dress", 1, 20);
+//            var dataImport = provider.GetService<DataImport>();
+//            await dataImport.Import();
         }
     }
 }

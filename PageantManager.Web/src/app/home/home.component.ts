@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   private stepper: MatHorizontalStepper;
   measurementsForm: FormGroup;
   measurements: Measurement[]
+  costumeId: number;
 
   constructor(
     private _fb: FormBuilder) { }
@@ -32,6 +33,7 @@ export class HomeComponent implements OnInit {
   }
 
   onSelectCostume(costume: Costume){
+    this.costumeId = costume.costumeId;
     this.stepper.next();
   }
 

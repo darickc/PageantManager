@@ -1,6 +1,8 @@
 .costumes{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  // display: flex;
+  // flex-wrap: wrap;
 }
 .photo{
   width:200px;
