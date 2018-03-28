@@ -2,61 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7cd595b-e366-48f0-91af-36e76657ba8a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core.Test/UnitTest1.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/BaseEntity.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/Costume.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/CostumeGarment.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/Entity.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/Garment.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/GarmentMeasurement.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/GarmentMeasurementType.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/GarmentType.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Entities/MeasurementType.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Enums/Gender.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Interfaces/IAdapter.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Interfaces/ICostumeService.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Interfaces/ICostumesRepository.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Interfaces/IRepository.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Interfaces/ISpecification.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/CostumeGarmentModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/CostumeModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/CostumesModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/GarmentMeasurementModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/GarmentMeasurementTypeModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/GarmentModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/GarmentTypeModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/ItemsModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/MeasurementModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Models/MeasurementTypeModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Services/CostumeService.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Specifications/BaseSpecification.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Specifications/SearchCostumesByMeasurements.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/Specifications/SearchCostumesByName.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure.Test/TestFixture.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure.Test/Tests/CostumeServiceTests.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure.Test/UnitTest1.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure/Adapter.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure/Data/CostumeRepository.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure/Data/PageantManagerContext.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure/Data/PageantManagerRepository.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure/Utilities/Configuration.cs" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/contentModel.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core.Test/PageantManager.Core.Test.csproj" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Core/PageantManager.Core.csproj" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure.Test/PageantManager.Infrastructure.Test.csproj" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/PageantManager.Infrastructure/PageantManager.Infrastructure.csproj" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.PageantManager/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PageantManager/riderModule.iml" afterPath="$PROJECT_DIR$/.idea/.idea.PageantManager/riderModule.iml" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Business.Test/Fixture.cs" afterPath="$PROJECT_DIR$/PageantManager.Business.Test/Fixture.cs" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs" afterPath="$PROJECT_DIR$/PageantManager.Business/Business/CostumesBusiness.cs" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Console/DataImport.cs" afterPath="$PROJECT_DIR$/PageantManager.Console/DataImport.cs" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Console/PageantManager.Console.csproj" afterPath="$PROJECT_DIR$/PageantManager.Console/PageantManager.Console.csproj" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Console/Program.cs" afterPath="$PROJECT_DIR$/PageantManager.Console/Program.cs" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/home/costumes/costumes.component.scss" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/home/costumes/costumes.component.scss" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/home/garments/garments.component.html" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/home/garments/garments.component.html" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/home/garments/garments.component.scss" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/home/garments/garments.component.scss" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/home/garments/garments.component.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/home/garments/garments.component.ts" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/home/home.component.html" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/home/home.component.html" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/home/home.component.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/home/home.component.ts" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/models/garment.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/models/garment.ts" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/services/costumes.service.ts" afterPath="$PROJECT_DIR$/PageantManager.Web/src/app/shared/services/costumes.service.ts" />
-      <change beforePath="$PROJECT_DIR$/PageantManager.sln" afterPath="$PROJECT_DIR$/PageantManager.sln" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -588,7 +538,7 @@
       <workItem from="1520909959468" duration="747000" />
       <workItem from="1521513718964" duration="1213000" />
       <workItem from="1522010108903" duration="1943000" />
-      <workItem from="1522164944712" duration="18184000" />
+      <workItem from="1522164944712" duration="18294000" />
     </task>
     <task id="LOCAL-00001" summary="none">
       <created>1508125757730</created>
@@ -646,11 +596,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518586209664</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactoring for better DDD.">
+      <created>1522246197887</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1522246197887</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105188000" />
+    <option name="totallyTimeSpent" value="105298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -700,7 +657,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="none" />
-    <option name="LAST_COMMIT_MESSAGE" value="none" />
+    <MESSAGE value="Refactoring for better DDD." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring for better DDD." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
