@@ -18,13 +18,50 @@ namespace PageantManager.Infrastructure.Test.Tests
         [Fact]
         public async Task SearchCostumesTest()
         {
-            var costumes = await _costumeService.SearchCostumes(new List<MeasurementModel>());
+            var costumes = await _costumeService.SearchCostumesByMeasurement(new List<MeasurementModel>());
         }
         
         [Fact]
         public async Task GetCostumesTest()
         {
-            var costumes = await _costumeService.GetCostumes("dress", 1, 20);
+            var costumes = await _costumeService.SearchCostumesByNameAndPage("dress", 1, 20);
+            Assert.NotNull(costumes);
+            Assert.NotEmpty(costumes.Items);
+        }
+
+        [Fact]
+        public async Task GetCostumeByIdAndFilterGarmentsByMeasurement()
+        {
+            var measurements = new List<MeasurementModel>
+            {
+                new MeasurementModel
+                {
+                    MeasurementType = new MeasurementTypeModel
+                    {
+                        MeasurementTypeId = 1
+                    },
+                    Value = 37
+                },
+                new MeasurementModel
+                {
+                    MeasurementType = new MeasurementTypeModel
+                    {
+                        MeasurementTypeId = 2
+                    },
+                    Value = 37
+                },
+                new MeasurementModel
+                {
+                    MeasurementType = new MeasurementTypeModel
+                    {
+                        MeasurementTypeId = 3
+                    },
+                    Value = 37
+                }
+            };
+            var costume = await _costumeService.GetCostumeByIdAndFilterGarmentsByMeasurement(2, measurements);
+            Assert.NotNull(costume);
+            Assert.NotEmpty(costume.CostumeGarments);
         }
     }
 }

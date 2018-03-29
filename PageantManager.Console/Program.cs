@@ -30,7 +30,7 @@ namespace PageantManager.Console
             ServiceProvider provider = services.BuildServiceProvider();
             
             var costumeService = provider.GetService<ICostumeService>();
-            var costumes = await costumeService.GetCostumes("dress", 1, 20);
+            var costumes = await costumeService.SearchCostumesByNameAndPage("dress", 1, 20);
 //            var dataImport = provider.GetService<DataImport>();
 //            await dataImport.Import();
         }

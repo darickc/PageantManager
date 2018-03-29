@@ -22,7 +22,7 @@ namespace PageantManager.Infrastructure.Test
             var services = new ServiceCollection();
             //services.AddDbContext<PageantManagerContext>(options => options.UseInMemoryDatabase("pm"));
             services.AddDbContext<PageantManagerContext>(options =>
-                options.UseSqlite("Data Source=../PageantManager.Web/PageanManager.db", b => b.MigrationsAssembly("PageantManager.Web")));
+                options.UseSqlite("Data Source=../../../../PageantManager.Web/PageanManager.db"));
             Configuration.Configure(services);
             
             ServiceProvider = services.BuildServiceProvider();

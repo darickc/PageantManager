@@ -148,6 +148,8 @@
         </e>
         <e p="Specifications" t="Include">
           <e p="BaseSpecification.cs" t="Include" />
+          <e p="GetCostumeByIdAndIncludeAll.cs" t="Include" />
+          <e p="GetCostumeByIdWithCostumeGarmentsAndsGarmentTypesSpecification.cs" t="Include" />
           <e p="SearchCostumesByMeasurements.cs" t="Include" />
           <e p="SearchCostumesByName.cs" t="Include" />
         </e>
